@@ -18,12 +18,13 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            Transforme Suas Aulas de Natação com{" "}
-            <span className="text-gradient">300 Atividades Prontas e Criativas</span>
+            <span className="text-gradient">300 Atividades</span> prontas e criativas para transformar suas{" "}
+            <span className="text-gradient">Aulas de Natação com</span>
           </h1>
 
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Economize horas de planejamento e surpreenda seus alunos com exercícios dinâmicos, divertidos e eficazes para todas as idades e níveis.
+            Economize horas de planejamento e surpreenda seus alunos com exercícios dinâmicos, divertidos e eficazes
+            para todas as idades e níveis.
           </p>
 
           <a href="#planos">
@@ -34,7 +35,9 @@ const HeroSection = () => {
 
           {/* Timer */}
           <div className="mt-12">
-            <p className="font-body text-sm text-muted-foreground mb-3 uppercase tracking-wider font-semibold">⏰ Oferta expira em:</p>
+            <p className="font-body text-sm text-muted-foreground mb-3 uppercase tracking-wider font-semibold">
+              ⏰ Oferta expira em:
+            </p>
             <CountdownTimer />
           </div>
 
