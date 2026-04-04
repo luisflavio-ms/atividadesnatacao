@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { ShoppingCart } from "lucide-react";
 
 const firstNames = [
-  "Ana", "Carla", "Fernanda", "Juliana", "Mariana", "Patrícia", "Camila", "Beatriz",
-  "Luciana", "Renata", "Tatiana", "Vanessa", "Isabela", "Larissa", "Gabriela",
-  "Amanda", "Bruna", "Daniela", "Elaine", "Flávia", "Helena", "Jéssica", "Karina",
-  "Letícia", "Michele", "Natália", "Priscila", "Raquel", "Sandra", "Thaís",
+  "Marcos", "Ana", "Carlos", "Fernanda", "Lucas", "Patrícia", "Rafael", "Beatriz",
+  "André", "Renata", "Bruno", "Vanessa", "Diego", "Larissa", "Gabriela",
+  "Amanda", "Thiago", "Daniela", "Eduardo", "Flávia", "Helena", "Gustavo", "Karina",
+  "Leonardo", "Michele", "Natália", "Pedro", "Raquel", "Sandra", "Thaís",
 ];
 
 const cities = [
@@ -32,10 +32,7 @@ const SocialProofNotifications = () => {
       setTimeout(() => setVisible(false), 4000);
     };
 
-    // First notification after 8s
     const initialTimeout = setTimeout(showNotification, 8000);
-
-    // Then every 15-25s
     const interval = setInterval(() => {
       showNotification();
     }, 15000 + Math.random() * 10000);
@@ -48,7 +45,7 @@ const SocialProofNotifications = () => {
 
   return (
     <div
-      className={`fixed bottom-20 md:bottom-6 left-4 z-50 max-w-[300px] bg-card border border-border rounded-xl shadow-2xl p-3 flex items-center gap-3 transition-all duration-500 ${
+      className={`fixed bottom-20 md:bottom-6 left-4 z-50 max-w-[300px] bg-background border border-border rounded-xl shadow-2xl p-3 flex items-center gap-3 transition-all duration-500 ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
     >

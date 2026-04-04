@@ -43,11 +43,10 @@ const Index = () => {
         <FAQSection />
         <FinalCTASection />
 
-        {/* Footer */}
         <footer className="bg-foreground py-8">
           <div className="container text-center">
             <p className="font-body text-background/60 text-xs">
-              © {new Date().getFullYear()} Letícia Carvalho — Todos os direitos reservados.
+              © {new Date().getFullYear()} AquaAtividades — Todos os direitos reservados.
             </p>
             <p className="font-body text-background/40 text-xs mt-2">
               Este produto não garante resultados específicos. Resultados variam de pessoa para pessoa.

@@ -1,11 +1,11 @@
 import { FileText, Layers, CheckCircle, Download, Printer } from "lucide-react";
 
 const items = [
-  { icon: FileText, text: "70 dinâmicas de yoga em PDF de alta qualidade" },
-  { icon: Layers, text: "Organizadas por nível, objetivo e duração" },
+  { icon: FileText, text: "300 atividades de natação em PDF de alta qualidade" },
+  { icon: Layers, text: "Organizadas por faixa etária, nível e objetivo" },
   { icon: CheckCircle, text: "Prontas para aplicar — sem adaptação necessária" },
   { icon: Download, text: "Acesso digital imediato após a compra" },
-  { icon: Printer, text: "Material 100% imprimível para usar no estúdio" },
+  { icon: Printer, text: "Material 100% imprimível para usar na piscina" },
 ];
 
 const DeliverablesSection = () => (

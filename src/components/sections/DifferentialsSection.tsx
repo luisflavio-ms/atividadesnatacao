@@ -1,10 +1,10 @@
 import { Target, Brain, Wrench, RefreshCw } from "lucide-react";
 
 const diffs = [
-  { icon: Target, title: "Todos os Níveis", desc: "Do iniciante ao avançado" },
-  { icon: Brain, title: "Corpo, Mente e Espírito", desc: "Abordagem integral" },
-  { icon: Wrench, title: "Metodologia Prática", desc: "Aplicação imediata" },
-  { icon: RefreshCw, title: "Atualizações Mensais", desc: "Conteúdo sempre novo" },
+  { icon: Target, title: "Todas as Idades", desc: "Crianças, jovens e adultos" },
+  { icon: Brain, title: "Técnica + Diversão", desc: "Aprendizado lúdico e eficaz" },
+  { icon: Wrench, title: "Aplicação Imediata", desc: "Use direto na próxima aula" },
+  { icon: RefreshCw, title: "Variedade Total", desc: "300 atividades diferentes" },
 ];
 
 const DifferentialsSection = () => (
