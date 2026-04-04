@@ -1,14 +1,12 @@
 import { Award, Users, BookOpen } from "lucide-react";
+import authorImg from "@/assets/author.png";
 
 const AuthorSection = () => (
   <section className="py-16 md:py-24 bg-card">
     <div className="container">
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        {/* Photo placeholder */}
-        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-accent/40 to-secondary/30 flex-shrink-0 flex items-center justify-center shadow-lg overflow-hidden">
-          <div className="w-full h-full bg-primary/10 flex items-center justify-center">
-            <span className="text-6xl">🏊</span>
-          </div>
+        <div className="w-48 h-48 md:w-56 md:h-56 rounded-full flex-shrink-0 shadow-lg overflow-hidden">
+          <img src={authorImg} alt="Equipe AquaAtividades" className="w-full h-full object-cover" />
         </div>
 
         <div className="text-center md:text-left">
