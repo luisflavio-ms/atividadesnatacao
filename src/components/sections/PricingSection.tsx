@@ -22,7 +22,7 @@ const PricingSection = () => {
 
               <ul className="space-y-5 mb-10 w-full text-left">
                 {[
-                  "300 Atividades de Natação em PDF",
+                  "300 Atividades de Natação",
                   "Organizadas por idade, nível e objetivo",
                   "Acesso digital imediato",
                   "BÔNUS: Guia de Jogos Aquáticos",
