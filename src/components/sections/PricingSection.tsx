@@ -27,7 +27,7 @@ const PricingSection = () => {
                   "Acesso digital imediato",
                   "BÔNUS: Guia de Jogos Aquáticos",
                   "BÔNUS: Planilha de Periodização",
-                  "BÔNUS: Checklist de Segurança",
+                  "BÔNUS: +100 brincadeiras aquáticas",
                   "Garantia de 7 dias",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-4 font-body text-[16px] text-foreground">
