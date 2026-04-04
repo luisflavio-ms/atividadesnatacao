@@ -1,9 +1,17 @@
 import { Gift } from "lucide-react";
 
 const bonuses = [
-  { name: "Guia de Jogos Aquáticos para Crianças", price: "R$37", desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis." },
-  { name: "Planilha de Periodização de Treinos", price: "R$47", desc: "Organize seus treinos semanais e mensais com facilidade." },
-  { name: "Checklist de Segurança na Piscina", price: "R$27", desc: "Protocolo completo de segurança para suas aulas." },
+  {
+    name: "Guia de Jogos Aquáticos para Crianças",
+    price: "R$37",
+    desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis.",
+  },
+  {
+    name: "Planilha de Periodização de Treinos",
+    price: "R$47",
+    desc: "Organize seus treinos semanais e mensais com facilidade.",
+  },
+  { name: "+100 brinadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
 ];
 
 const BonusSection = () => (
@@ -35,11 +43,15 @@ const BonusSection = () => (
                 </div>
                 <h3 className="font-body font-bold text-foreground text-base mb-2">{b.name}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{b.desc}</p>
-                
+
                 <div className="mt-auto pt-3 border-t border-border/50 flex flex-col gap-1">
-                  <span className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">Valor original</span>
+                  <span className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
+                    Valor original
+                  </span>
                   <div className="flex items-center justify-between">
-                    <span className="font-body text-muted-foreground line-through decoration-destructive/60 decoration-2">{b.price}</span>
+                    <span className="font-body text-muted-foreground line-through decoration-destructive/60 decoration-2">
+                      {b.price}
+                    </span>
                     <span className="font-body font-bold text-primary text-xl">GRÁTIS</span>
                   </div>
                 </div>
@@ -49,9 +61,13 @@ const BonusSection = () => (
         </div>
 
         <div className="w-full max-w-2xl bg-gradient-to-r from-primary/5 via-accent/10 to-primary/5 border-2 border-primary/20 rounded-2xl p-6 text-center shadow-xl">
-          <p className="font-body text-muted-foreground text-sm uppercase tracking-[0.2em] font-bold mb-2">Valor Total dos Bônus</p>
+          <p className="font-body text-muted-foreground text-sm uppercase tracking-[0.2em] font-bold mb-2">
+            Valor Total dos Bônus
+          </p>
           <div className="flex items-center justify-center gap-6">
-            <span className="font-display text-2xl md:text-3xl text-muted-foreground line-through decoration-destructive/60 decoration-4">R$111</span>
+            <span className="font-display text-2xl md:text-3xl text-muted-foreground line-through decoration-destructive/60 decoration-4">
+              R$111
+            </span>
             <span className="text-primary font-bold text-4xl md:text-5xl drop-shadow-sm">GRÁTIS</span>
           </div>
         </div>
