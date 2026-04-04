@@ -9,10 +9,14 @@ const PricingSection = () => {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1.5 rounded-full bg-gradient-to-r from-primary to-secondary"></div>
 
             <div className="h-full bg-card rounded-3xl p-8 shadow-[0_4px_25px_rgb(0,0,0,0.08)] flex flex-col items-center text-center border border-border">
-              <h3 className="font-display text-2xl font-bold text-foreground mb-6 tracking-wide mt-2">300 Atividades de Natação</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-6 tracking-wide mt-2">
+                300 Atividades de Natação
+              </h3>
 
               <span className="font-body text-muted-foreground font-medium line-through text-[17px] mb-1">R$97</span>
-              <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight">R$10,00</span>
+              <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight">
+                R$10,00
+              </span>
               <span className="font-body text-muted-foreground text-[15px] mb-1">pagamento único</span>
               <span className="font-body text-primary font-bold text-[15px] mb-10">Você economiza R$87,00</span>
 
@@ -38,7 +42,7 @@ const PricingSection = () => {
               </ul>
 
               <div className="mt-auto w-full pt-2">
-                <a href="#" className="block w-full">
+                <a href="https://pay.wiapy.com/RWaVaArGQ7" className="block w-full">
                   <button className="w-full py-5 bg-gradient-cta hover:brightness-110 active:scale-[0.98] text-primary-foreground font-body font-extrabold text-xl rounded-full shadow-[0_10px_30px_hsl(205_85%_45%/0.4)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
                     <ShoppingCart size={24} className="stroke-[2.5]" />
                     COMPRAR AGORA
