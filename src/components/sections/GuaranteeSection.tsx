@@ -14,7 +14,7 @@ const GuaranteeSection = () => (
           <p className="font-body text-muted-foreground leading-relaxed max-w-lg mx-auto">
             Se por qualquer motivo você não gostar do material, basta nos enviar uma mensagem em até 7 dias 
             e devolvemos <span className="font-semibold text-foreground">100% do seu dinheiro</span>. 
-            Sem perguntas, sem burocracia. O risco é todo nosso.
+            Sem perguntas, sem burocracia. Nós trocamos — o risco é todo nosso.
           </p>
         </div>
       </div>

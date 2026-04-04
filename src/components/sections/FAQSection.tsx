@@ -6,11 +6,12 @@ import {
 } from "@/components/ui/accordion";
 
 const faqs = [
-  { q: "Como acesso o material?", a: "Após a compra, você recebe acesso imediato ao conteúdo digital. Um link será enviado para seu e-mail com instruções para baixar os PDFs e acessar os vídeos (plano premium)." },
-  { q: "Serve para iniciantes?", a: "Sim! As dinâmicas são organizadas por nível — iniciante, intermediário e avançado. Você pode começar pelas mais simples e evoluir no seu ritmo." },
-  { q: "Posso usar em meu estúdio?", a: "Com certeza! O material foi criado pensando em instrutores e donos de estúdios. Você pode imprimir e usar livremente em suas aulas presenciais ou online." },
-  { q: "Preciso de experiência prévia?", a: "Não necessariamente. As dinâmicas vêm com instruções claras e detalhadas. Porém, se você já pratica ou ensina yoga, o aproveitamento será ainda maior." },
-  { q: "Como funciona a garantia?", a: "Você tem 7 dias para testar o material. Se não ficar satisfeito(a), basta nos enviar uma mensagem e devolvemos 100% do valor pago, sem perguntas." },
+  { q: "Como acesso o material?", a: "Após a compra, você recebe acesso imediato ao conteúdo digital. Um link será enviado para seu e-mail com instruções para baixar os PDFs." },
+  { q: "Serve para todas as idades?", a: "Sim! As atividades são organizadas por faixa etária — crianças, jovens e adultos. Você encontra opções para todos os níveis." },
+  { q: "Posso usar na minha escola de natação?", a: "Com certeza! O material foi criado pensando em professores e donos de escolas. Você pode imprimir e usar livremente em suas aulas." },
+  { q: "Preciso de experiência como professor?", a: "Não necessariamente. As atividades vêm com instruções claras e detalhadas. Porém, se você já ensina natação, o aproveitamento será ainda maior." },
+  { q: "Como funciona a garantia?", a: "Você tem 7 dias para avaliar o material. Se não gostar, basta nos enviar uma mensagem e devolvemos 100% do valor pago, sem perguntas." },
+  { q: "E se eu não gostar do material?", a: "Sem problema! Você tem 7 dias de garantia incondicional. Basta solicitar o reembolso e devolvemos todo o seu dinheiro. Nós trocamos — o risco é zero." },
 ];
 
 const FAQSection = () => (

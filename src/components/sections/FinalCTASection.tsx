@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 const FinalCTASection = () => (
-  <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted">
+  <section className="py-16 md:py-24 bg-gradient-to-b from-background to-card">
     <div className="container">
       <div className="max-w-2xl mx-auto text-center scroll-fade">
         <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4 leading-tight">

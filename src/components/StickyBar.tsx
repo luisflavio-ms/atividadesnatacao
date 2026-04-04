@@ -8,7 +8,7 @@ const StickyBar = () => (
         <CountdownTimer compact />
       </div>
       <a href="#planos">
-        <button className="bg-yoga-orange text-foreground font-body font-bold text-sm px-5 py-2.5 rounded-full shadow-lg hover:brightness-110 transition-all">
+        <button className="bg-swim-orange text-foreground font-body font-bold text-sm px-5 py-2.5 rounded-full shadow-lg hover:brightness-110 transition-all">
           COMPRAR AGORA
         </button>
       </a>
