@@ -11,9 +11,9 @@ const DifferentialsSection = () => (
   <section className="py-16 md:py-24 bg-card">
     <div className="container">
       <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
-        O Que Nos Torna <span className="text-gradient">Diferentes</span>
+        O Que nos torna <span className="text-gradient">diferentes</span>
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-4xl mx-auto">
         {diffs.map((d, i) => (
           <div key={i} className="scroll-fade text-center p-5">
             <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
