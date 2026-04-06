@@ -6,15 +6,16 @@ const AuthorSection = () => (
     <div className="container">
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <div className="w-48 h-48 md:w-56 md:h-56 rounded-full flex-shrink-0 shadow-lg overflow-hidden">
-          <img src={authorImg} alt="Equipe AquaAtividades" className="w-full h-full object-cover" />
+          <img src={authorImg} alt="Letícia Carvalho" className="w-full h-full object-cover" />
         </div>
 
         <div className="text-center md:text-left">
           <p className="font-body text-sm text-primary font-semibold mb-1 uppercase tracking-wider">Quem Criou</p>
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Equipe AquaAtividades</h2>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Letícia Carvalho</h2>
           <p className="font-body text-muted-foreground leading-relaxed mb-5 text-sm md:text-base">
-            Desenvolvido por uma equipe de professores de natação com mais de 15 anos de experiência 
-            em escolas e academias de todo o Brasil. Conteúdo testado e aprovado por centenas de profissionais.
+            Professora de natação apaixonada por ensinar e transformar vidas dentro da água. 
+            Com anos de experiência em aulas para todas as idades, Letícia criou este material 
+            para ajudar outros profissionais a terem aulas mais criativas, organizadas e eficientes.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <div className="flex items-center gap-2 font-body text-xs text-muted-foreground bg-background px-3 py-2 rounded-full">
