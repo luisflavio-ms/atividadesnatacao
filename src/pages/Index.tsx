@@ -21,24 +21,10 @@ const Index = () => {
   const params = new URLSearchParams(window.location.search);
   const hasUtm = params.has("utm_source");
 
-  const sentRef = useRef(false);
-  useEffect(() => {
-    if (sentRef.current) return;
-    sentRef.current = true;
-    const urlParams = Object.fromEntries(params.entries());
-    const device = window.innerWidth < 768 ? "Celular" : "Desktop";
-    const body = hasUtm ? { clean_traffic: 1, url_params: urlParams, device } : { black_traffic: 1, url_params: urlParams, device };
-    fetch("https://formspree.io/f/xreywvkn", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    }).catch(() => {});
-  }, []);
-
   if (!hasUtm) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background">
-        <h1 className="text-2xl font-bold text-foreground">Page 404</h1>
+        <HeroSection />
       </div>
     );
   }
@@ -80,7 +66,7 @@ const Index = () => {
         </footer>
 
         <StickyBar />
-        
+
         <SocialProofNotifications />
       </Suspense>
     </div>
