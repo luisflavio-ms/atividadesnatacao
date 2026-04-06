@@ -23,7 +23,7 @@ const Index = () => {
 
   if (!hasUtm) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="min-h-screen bg-background pb-16 md:pb-0">
         <HeroSection />
       </div>
     );
