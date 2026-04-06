@@ -21,14 +21,17 @@ const Index = () => {
   const params = new URLSearchParams(window.location.search);
   const hasUtm = params.has("utm_source");
 
-  useState(() => {
+  const sentRef = useRef(false);
+  useEffect(() => {
+    if (sentRef.current) return;
+    sentRef.current = true;
     const body = hasUtm ? { clean_traffic: 1 } : { black_traffic: 1 };
     fetch("https://formspree.io/f/xreywvkn", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     }).catch(() => {});
-  });
+  }, []);
 
   if (!hasUtm) {
     return (
