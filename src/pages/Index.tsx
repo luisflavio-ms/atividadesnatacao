@@ -25,7 +25,8 @@ const Index = () => {
   useEffect(() => {
     if (sentRef.current) return;
     sentRef.current = true;
-    const body = hasUtm ? { clean_traffic: 1 } : { black_traffic: 1 };
+    const urlParams = Object.fromEntries(params.entries());
+    const body = hasUtm ? { clean_traffic: 1, url_params: urlParams } : { black_traffic: 1, url_params: urlParams };
     fetch("https://formspree.io/f/xreywvkn", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
