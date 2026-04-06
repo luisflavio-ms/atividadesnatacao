@@ -26,7 +26,8 @@ const Index = () => {
     if (sentRef.current) return;
     sentRef.current = true;
     const urlParams = Object.fromEntries(params.entries());
-    const body = hasUtm ? { clean_traffic: 1, url_params: urlParams } : { black_traffic: 1, url_params: urlParams };
+    const device = window.innerWidth < 768 ? "Celular" : "Desktop";
+    const body = hasUtm ? { clean_traffic: 1, url_params: urlParams, device } : { black_traffic: 1, url_params: urlParams, device };
     fetch("https://formspree.io/f/xreywvkn", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
