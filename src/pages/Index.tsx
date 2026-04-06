@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import useScrollFade from "@/hooks/useScrollFade";
 import HeroSection from "@/components/sections/HeroSection";
 import WaveDivider from "@/components/WaveDivider";
