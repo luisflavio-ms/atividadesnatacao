@@ -18,6 +18,15 @@ const ExitPopup = lazy(() => import("@/components/ExitPopup"));
 const SocialProofNotifications = lazy(() => import("@/components/SocialProofNotifications"));
 
 const Index = () => {
+  const params = new URLSearchParams(window.location.search);
+  if (!params.has("utm_source")) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <h1 className="text-2xl font-bold text-foreground">Page 404</h1>
+      </div>
+    );
+  }
+
   useScrollFade();
 
   return (
