@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Check, ShoppingCart, Gift, Star, Crown } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 const PricingSection = () => {
   const [showPromoModal, setShowPromoModal] = useState(false);
@@ -16,11 +10,35 @@ const PricingSection = () => {
     setShowPromoModal(true);
   };
 
+  const getUrl = (url: string) => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+
+      const utms = {
+        utm_source: params.get("utm_source"),
+        utm_medium: params.get("utm_medium"),
+        utm_campaign: params.get("utm_campaign"),
+        utm_content: params.get("utm_content"),
+        utm_term: params.get("utm_term"),
+      };
+
+      const checkoutUrl = new URL(url);
+
+      Object.entries(utms).forEach(([key, value]) => {
+        if (value) checkoutUrl.searchParams.append(key, value);
+      });
+
+      // window.location.href = checkoutUrl.toString();
+      return checkoutUrl.toString();
+    } catch (error) {
+      return url;
+    }
+  };
+
   return (
     <section id="planos" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
-
           {/* Pacote Normal - Less prominent */}
           <div className="relative pt-4 flex">
             <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-sm flex flex-col items-center text-center border border-border">
@@ -29,9 +47,7 @@ const PricingSection = () => {
               </h3>
 
               <span className="font-body text-muted-foreground font-medium line-through text-sm mb-1">R$97</span>
-              <span className="font-display text-4xl font-bold text-foreground mb-2 tracking-tight">
-                R$10,00
-              </span>
+              <span className="font-display text-4xl font-bold text-foreground mb-2 tracking-tight">R$10,00</span>
               <span className="font-body text-muted-foreground text-sm mb-1">pagamento único</span>
               <span className="font-body text-muted-foreground font-semibold text-sm mb-8">Você economiza R$87,00</span>
 
@@ -85,13 +101,34 @@ const PricingSection = () => {
 
               <ul className="space-y-4 mb-8 w-full text-left">
                 {[
-                  { text: "300 Atividades de Natação", bonus: false },
-                  { text: "Organizadas por idade, nível e objetivo", bonus: false },
-                  { text: "Acesso digital imediato", bonus: false },
-                  { text: "BÔNUS: Guia de Jogos Aquáticos", bonus: true },
-                  { text: "BÔNUS: Planilha de Periodização", bonus: true },
-                  { text: "BÔNUS: +100 brincadeiras aquáticas", bonus: true },
-                  { text: "Garantia de 7 dias", bonus: false },
+                  {
+                    text: "300 Atividades de Natação",
+                    bonus: false,
+                  },
+                  {
+                    text: "Organizadas por idade, nível e objetivo",
+                    bonus: false,
+                  },
+                  {
+                    text: "Acesso digital imediato",
+                    bonus: false,
+                  },
+                  {
+                    text: "BÔNUS: Guia de Jogos Aquáticos",
+                    bonus: true,
+                  },
+                  {
+                    text: "BÔNUS: Planilha de Periodização",
+                    bonus: true,
+                  },
+                  {
+                    text: "BÔNUS: +100 brincadeiras aquáticas",
+                    bonus: true,
+                  },
+                  {
+                    text: "Garantia de 7 dias",
+                    bonus: false,
+                  },
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 font-body text-[16px] text-foreground">
                     {item.bonus ? (
@@ -105,7 +142,7 @@ const PricingSection = () => {
               </ul>
 
               <div className="mt-auto w-full pt-2">
-                <a href="https://pay.wiapy.com/y9A5jHIgSW" className="block w-full">
+                <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full">
                   <button className="w-full py-5 bg-gradient-cta hover:brightness-110 active:scale-[0.98] text-primary-foreground font-body font-extrabold text-xl rounded-full shadow-[0_10px_30px_hsl(205_85%_45%/0.4)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
                     <Star size={24} className="stroke-[2.5]" />
                     QUERO O PREMIUM
@@ -139,7 +176,7 @@ const PricingSection = () => {
                 <span className="text-muted-foreground line-through text-sm">R$27,90</span>
                 <span className="font-display text-3xl font-bold text-primary">R$17,90</span>
               </div>
-              <a href="https://pay.wiapy.com/isE8Yjmic" className="block">
+              <a href={getUrl("https://pay.wiapy.com/isE8Yjmic")} className="block">
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   QUERO ESTA OFERTA
@@ -148,7 +185,7 @@ const PricingSection = () => {
             </div>
 
             <a
-              href="https://pay.wiapy.com/RWaVaArGQ7"
+              href={getUrl("https://pay.wiapy.com/RWaVaArGQ7")}
               className="block text-center text-muted-foreground text-sm underline hover:text-foreground transition-colors"
             >
               Não, quero continuar com o pacote de R$10,00
