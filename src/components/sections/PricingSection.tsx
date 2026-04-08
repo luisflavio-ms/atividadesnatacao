@@ -70,7 +70,7 @@ const PricingSection = () => {
               <div className="mt-auto w-full pt-2">
                 <button
                   onClick={handleNormalClick}
-                  className="w-full py-4 bg-muted hover:bg-muted/80 active:scale-[0.98] text-foreground font-body font-bold text-base rounded-full border border-border transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-green-500 hover:bg-green-600 active:scale-[0.98] text-white font-body font-bold text-base rounded-full transition-all flex items-center justify-center gap-2"
                 >
                   <ShoppingCart size={20} />
                   COMPRAR AGORA
