@@ -111,7 +111,7 @@ const PricingSection = () => {
               <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mb-8">
                 <button className="w-full py-4 bg-swim-orange hover:brightness-110 active:scale-[0.98] text-foreground font-body font-extrabold text-lg uppercase rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
                   <Star size={22} className="fill-current stroke-[2]" />
-                  ACESSO VITALÍCIO
+                  COMPRAR AGORA
                 </button>
               </a>
 
