@@ -59,7 +59,9 @@ const PricingSection = () => {
                   "Garantia de 7 dias",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 font-body text-[15px] text-muted-foreground">
-                    <Check className="text-muted-foreground flex-shrink-0 mt-0.5 stroke-[2]" size={18} />
+                    <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                      <Check className="text-white stroke-[3]" size={12} />
+                    </span>
                     <span>{text}</span>
                   </li>
                 ))}
