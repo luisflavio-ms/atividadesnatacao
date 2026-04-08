@@ -59,7 +59,9 @@ const PricingSection = () => {
                   "Garantia de 7 dias",
                 ].map((text, i) => (
                   <li key={i} className="flex items-start gap-3 font-body text-[15px] text-muted-foreground">
-                    <Check className="text-muted-foreground flex-shrink-0 mt-0.5 stroke-[2]" size={18} />
+                    <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-green-500 flex items-center justify-center">
+                      <Check className="text-white stroke-[3]" size={12} />
+                    </span>
                     <span>{text}</span>
                   </li>
                 ))}
@@ -68,7 +70,7 @@ const PricingSection = () => {
               <div className="mt-auto w-full pt-2">
                 <button
                   onClick={handleNormalClick}
-                  className="w-full py-4 bg-muted hover:bg-muted/80 active:scale-[0.98] text-foreground font-body font-bold text-base rounded-full border border-border transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-green-500 hover:bg-green-600 active:scale-[0.98] text-white font-body font-bold text-base rounded-full transition-all flex items-center justify-center gap-2"
                 >
                   <ShoppingCart size={20} />
                   COMPRAR AGORA
@@ -87,17 +89,17 @@ const PricingSection = () => {
             </div>
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1.5 rounded-full bg-gradient-to-r from-primary to-swim-aqua"></div>
 
-            <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-[0_8px_40px_hsl(205_85%_45%/0.18)] flex flex-col items-center text-center border-2 border-primary ring-2 ring-primary/10">
+            <div className="h-full w-full bg-gradient-to-b from-primary/5 to-card rounded-2xl p-6 md:p-8 shadow-[0_8px_40px_hsl(205_85%_45%/0.25)] flex flex-col items-center text-center border-2 border-primary ring-4 ring-primary/15">
               <h3 className="font-display text-2xl font-bold text-foreground mb-5 tracking-wide mt-4">
                 Pacote Premium Completo
               </h3>
 
               <span className="font-body text-muted-foreground font-medium line-through text-[17px] mb-1">R$197</span>
-              <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight">
+              <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight drop-shadow-sm">
                 R$27,90
               </span>
               <span className="font-body text-muted-foreground text-[15px] mb-1">pagamento único</span>
-              <span className="font-body text-primary font-bold text-[15px] mb-8">Você economiza R$169,10</span>
+              <span className="inline-block bg-primary/10 text-primary font-bold text-[15px] mb-8 px-3 py-1 rounded-full">Você economiza R$169,10</span>
 
               <ul className="space-y-4 mb-8 w-full text-left">
                 {[
