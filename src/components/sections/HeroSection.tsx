@@ -23,8 +23,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Economize horas de planejamento e surpreenda seus alunos com exercícios dinâmicos, divertidos e eficazes
-            para todas as idades e níveis.
+            O material completo que professores de natação usam para dar aulas mais dinâmicas, criativas e inesquecíveis.
           </p>
 
           <a href="#planos">
