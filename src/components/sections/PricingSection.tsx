@@ -34,15 +34,12 @@ const PricingSection = () => {
     <section id="planos" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-start">
-
           {/* Plano Básico */}
           <div className="bg-card rounded-2xl border border-border shadow-sm p-6 md:p-8 flex flex-col items-center text-center">
             <h3 className="font-display text-xl md:text-2xl font-extrabold text-foreground uppercase tracking-wide mb-1">
               Plano Básico
             </h3>
-            <p className="font-body text-muted-foreground text-sm mb-6">
-              Para quem quer testar o método
-            </p>
+            <p className="font-body text-muted-foreground text-sm mb-6">Para quem quer testar o método</p>
 
             <span className="font-body text-muted-foreground line-through text-sm">De R$97</span>
             <div className="flex items-baseline gap-0.5 mb-1">
@@ -50,7 +47,9 @@ const PricingSection = () => {
               <span className="font-display text-5xl font-extrabold text-foreground">10</span>
               <span className="font-body text-muted-foreground text-lg">,00</span>
             </div>
-            <span className="font-body text-muted-foreground text-xs uppercase tracking-wider mb-8">Pagamento único</span>
+            <span className="font-body text-muted-foreground text-xs uppercase tracking-wider mb-8">
+              Pagamento único
+            </span>
 
             <ul className="space-y-3 mb-8 w-full text-left">
               {[
@@ -105,7 +104,9 @@ const PricingSection = () => {
                 <span className="font-display text-5xl md:text-6xl font-extrabold text-primary-foreground">27</span>
                 <span className="font-body text-primary-foreground/80 text-lg">,90</span>
               </div>
-              <span className="font-body text-primary-foreground/60 text-xs uppercase tracking-wider mb-8">Pagamento único</span>
+              <span className="font-body text-primary-foreground/60 text-xs uppercase tracking-wider mb-8">
+                Pagamento único
+              </span>
 
               {/* CTA Button */}
               <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mb-8">
@@ -139,20 +140,18 @@ const PricingSection = () => {
                 <div className="flex items-center gap-2 mb-3">
                   <Gift size={18} className="text-swim-orange" />
                   <span className="font-body font-extrabold text-primary-foreground text-sm">
-                    Mais de R$87 reais de bônus GRÁTIS:
+                    Mais de R$110 reais de bônus GRÁTIS:
                   </span>
                 </div>
                 <ul className="space-y-2">
-                  {[
-                    "Guia de Jogos Aquáticos",
-                    "Planilha de Periodização",
-                    "+100 Brincadeiras Aquáticas",
-                  ].map((text, i) => (
-                    <li key={i} className="flex items-start gap-2 font-body text-[13px] text-primary-foreground/90">
-                      <span className="text-swim-orange mt-px">•</span>
-                      <span>{text}</span>
-                    </li>
-                  ))}
+                  {["Guia de Jogos Aquáticos", "Planilha de Periodização", "+100 Brincadeiras Aquáticas"].map(
+                    (text, i) => (
+                      <li key={i} className="flex items-start gap-2 font-body text-[13px] text-primary-foreground/90">
+                        <span className="text-swim-orange mt-px">•</span>
+                        <span>{text}</span>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             </div>
