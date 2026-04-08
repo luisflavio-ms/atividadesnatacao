@@ -11,7 +11,7 @@ const bonuses = [
     price: "R$47",
     desc: "Organize seus treinos semanais e mensais com facilidade.",
   },
-  { name: "+100 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
+  { name: "+500 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
 ];
 
 const BonusSection = () => (
