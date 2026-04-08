@@ -105,13 +105,7 @@ const PricingSection = () => {
                 <span className="font-display text-5xl md:text-6xl font-extrabold text-primary-foreground">27</span>
                 <span className="font-body text-primary-foreground/80 text-lg">,90</span>
               </div>
-              <span className="font-body text-primary-foreground/60 text-xs uppercase tracking-wider mb-3">Pagamento único</span>
-
-              {/* Cupom badge */}
-              <div className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-8">
-                <span className="text-sm">🏷️</span>
-                <span className="font-body font-bold text-primary-foreground text-sm">Cupom: PROMO</span>
-              </div>
+              <span className="font-body text-primary-foreground/60 text-xs uppercase tracking-wider mb-8">Pagamento único</span>
 
               {/* CTA Button */}
               <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mb-8">
