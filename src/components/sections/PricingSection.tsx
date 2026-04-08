@@ -144,7 +144,7 @@ const PricingSection = () => {
                   </span>
                 </div>
                 <ul className="space-y-2">
-                  {["Guia de Jogos Aquáticos", "Planilha de Periodização", "+100 Brincadeiras Aquáticas"].map(
+                  {["Guia de Jogos Aquáticos", "Planilha de Periodização", "+500 Brincadeiras Aquáticas"].map(
                     (text, i) => (
                       <li key={i} className="flex items-start gap-2 font-body text-[13px] text-primary-foreground/90">
                         <span className="text-swim-orange mt-px">•</span>
