@@ -125,23 +125,23 @@ const PricingSection = () => {
               </ul>
 
               {/* Bônus section */}
-              <div className="w-full bg-accent/50 border border-primary/20 rounded-xl p-5 text-left mb-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Gift size={18} className="text-swim-orange" />
-                  <span className="font-body font-extrabold text-foreground text-sm">
-                    Mais de R$110 reais de bônus GRÁTIS:
-                  </span>
-                </div>
-                <ul className="space-y-2">
-                  {["Guia de Jogos Aquáticos", "Planilha de Periodização", "+500 Brincadeiras Aquáticas"].map(
-                    (text, i) => (
-                      <li key={i} className="flex items-start gap-2 font-body text-[13px] text-foreground/80">
-                        <span className="text-swim-orange mt-px">•</span>
-                        <span>{text}</span>
-                      </li>
-                    ),
-                  )}
-                </ul>
+              <div className="w-full text-left mb-6 space-y-0">
+                {[
+                  "Guia de Jogos Aquáticos",
+                  "Planilha de Periodização",
+                  "+500 Brincadeiras Aquáticas",
+                  "Acesso Vitalício",
+                ].map((text, i) => (
+                  <div key={i} className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
+                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <Check className="text-white stroke-[3]" size={12} />
+                    </span>
+                    <span className="font-body text-[14px] text-foreground">
+                      <span className="font-extrabold text-swim-orange">Bônus #{i + 1}</span>{" "}
+                      {text}
+                    </span>
+                  </div>
+                ))}
               </div>
 
               {/* CTA Button */}
