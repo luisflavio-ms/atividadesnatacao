@@ -130,6 +130,8 @@ const PricingSection = () => {
                   "Guia de Jogos Aquáticos",
                   "Planilha de Periodização",
                   "+500 Brincadeiras Aquáticas",
+                  "Exercícios de Hidroginástica",
+                  "Técnicas de Natação Crawl e Pernada",
                   "Acesso Vitalício",
                 ].map((text, i) => (
                   <div key={i} className="flex items-center gap-3 py-3 border-b border-border last:border-b-0">
@@ -143,6 +145,9 @@ const PricingSection = () => {
                   </div>
                 ))}
               </div>
+              <p className="w-full text-center font-body font-extrabold text-emerald-600 text-sm mb-4">
+                🎉 Você economiza R$127,10
+              </p>
 
               {/* CTA Button */}
               <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mt-auto">
