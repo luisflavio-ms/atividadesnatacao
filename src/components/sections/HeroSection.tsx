@@ -5,17 +5,21 @@ const HeroSection = () => {
   const today = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background pt-8 pb-12 md:pt-16 md:pb-20">
-      {/* Decorative circles */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+    <>
+      {/* Banner vermelho topo */}
+      <div className="w-full bg-red-600 text-white text-center py-2.5 px-4">
+        <p className="font-body font-bold text-sm md:text-base">
+          ⚡ OFERTA ESPECIAL DISPONÍVEL APENAS HOJE {today}
+        </p>
+      </div>
 
-      <div className="container relative">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Urgency badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-body font-semibold text-xs md:text-sm px-4 py-2 rounded-full mb-6">
-            🏊 OFERTA ESPECIAL — SÓ HOJE {today}
-          </div>
+      <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background pt-8 pb-12 md:pt-16 md:pb-20">
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-72 h-72 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+        <div className="container relative">
+          <div className="max-w-4xl mx-auto text-center">
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
             <span className="text-gradient">300 Atividades</span> criativas que tornam a natação{" "}
