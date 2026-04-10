@@ -139,14 +139,13 @@ const PricingSection = () => {
                       <Check className="text-white stroke-[3]" size={12} />
                     </span>
                     <span className="font-body text-[14px] text-foreground">
-                      <span className="font-extrabold text-swim-orange">Bônus #{i + 1}</span>{" "}
-                      {text}
+                      <span className="font-extrabold text-swim-orange">Bônus #{i + 1}</span> {text}
                     </span>
                   </div>
                 ))}
               </div>
               <p className="w-full text-center font-body font-extrabold text-emerald-600 text-sm mb-4">
-                🎉 Você economiza R$127,10
+                🎉 Você economiza R$169,10
               </p>
 
               {/* CTA Button */}
