@@ -8,9 +8,7 @@ const HeroSection = () => {
     <>
       {/* Banner vermelho topo */}
       <div className="w-full bg-red-600 text-white text-center py-2.5 px-4">
-        <p className="font-body font-bold text-sm md:text-base">
-          ⚡ OFERTA ESPECIAL DISPONÍVEL APENAS HOJE {today}
-        </p>
+        <p className="font-body font-bold text-sm md:text-base">⚡ OFERTA ESPECIAL DISPONÍVEL APENAS HOJE {today}</p>
       </div>
 
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-background to-background pt-8 pb-12 md:pt-16 md:pb-20">
@@ -20,36 +18,37 @@ const HeroSection = () => {
 
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
+              <span className="text-gradient">300 Atividades</span> prontas e criativas para{" "}
+              <span className="text-gradient">transformar</span>suas Aulas de Natação
+              <span className="text-gradient">+ bônus</span>
+            </h1>
 
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            <span className="text-gradient">300 Atividades</span> criativas que tornam a natação{" "}
-            <span className="text-gradient">3x Mais Divertida + bônus</span>
-          </h1>
-
-          <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            O material completo que professores de natação usam para dar aulas mais dinâmicas, criativas e inesquecíveis.
-          </p>
-
-          <a href="#planos">
-            <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
-              👉 QUERO ACESSAR AGORA
-            </Button>
-          </a>
-
-          {/* Timer */}
-          <div className="mt-12">
-            <p className="font-body text-sm text-muted-foreground mb-3 uppercase tracking-wider font-semibold">
-              ⏰ Oferta expira em:
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              Economize horas de planejamento e surpreenda seus alunos com exercícios dinâmicos, divertidos e eficazes
+              para todas as idades e níveis.
             </p>
-            <CountdownTimer />
-          </div>
 
-          {/* Social proof */}
-          <p className="mt-6 font-body text-[15px] text-muted-foreground">
-            🔥 <span className="font-bold text-foreground">+2.450 professores</span> já compraram
-          </p>
+            <a href="#planos">
+              <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
+                👉 QUERO ACESSAR AGORA
+              </Button>
+            </a>
+
+            {/* Timer */}
+            <div className="mt-12">
+              <p className="font-body text-sm text-muted-foreground mb-3 uppercase tracking-wider font-semibold">
+                ⏰ Oferta expira em:
+              </p>
+              <CountdownTimer />
+            </div>
+
+            {/* Social proof */}
+            <p className="mt-6 font-body text-[15px] text-muted-foreground">
+              🔥 <span className="font-bold text-foreground">+2.450 professores</span> já compraram
+            </p>
+          </div>
         </div>
-      </div>
       </section>
     </>
   );
