@@ -39,7 +39,6 @@ const PricingSection = () => {
             <h3 className="font-display text-xl md:text-2xl font-extrabold text-foreground uppercase tracking-wide mb-1">
               Plano Básico
             </h3>
-            <p className="font-body text-muted-foreground text-sm mb-6">Para quem quer testar o método</p>
 
             <span className="font-body text-muted-foreground line-through text-sm">De R$97</span>
             <div className="flex items-baseline gap-0.5 mb-1">
@@ -94,9 +93,7 @@ const PricingSection = () => {
               <h3 className="font-display text-xl md:text-2xl font-extrabold text-foreground uppercase tracking-wide mb-1 mt-2">
                 Plano Completo
               </h3>
-              <p className="font-body text-muted-foreground text-sm mb-6">
-                Para transformar suas aulas o ano todo
-              </p>
+              <p className="font-body text-muted-foreground text-sm mb-6">Para transformar suas aulas o ano todo</p>
 
               <span className="font-body text-muted-foreground line-through text-sm">De R$197</span>
               <div className="flex items-baseline gap-0.5 mb-1">
