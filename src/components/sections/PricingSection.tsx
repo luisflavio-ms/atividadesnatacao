@@ -76,6 +76,9 @@ const PricingSection = () => {
                 <ShoppingCart size={20} />
                 COMPRAR AGORA
               </button>
+              <p className="mt-3 text-center font-body text-xs text-muted-foreground">
+                👇 92% das pessoas aproveitam a oferta abaixo
+              </p>
             </div>
           </div>
 
