@@ -50,7 +50,8 @@ const HeroSection = () => {
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
 
