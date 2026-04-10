@@ -65,7 +65,7 @@ const Index = () => {
           </div>
         </footer>
 
-        <StickyBar />
+        
 
         <SocialProofNotifications />
       </Suspense>
