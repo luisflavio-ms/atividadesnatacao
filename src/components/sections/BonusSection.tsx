@@ -1,17 +1,27 @@
 import { Gift } from "lucide-react";
+import bonusGuiaJogos from "@/assets/bonus-guia-jogos.png";
+import bonusPlanilha from "@/assets/bonus-planilha.png";
+import bonusBrincadeiras from "@/assets/bonus-brincadeiras.png";
 
 const bonuses = [
   {
     name: "Guia de Jogos Aquáticos para Crianças",
     price: "R$37",
     desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis.",
+    image: bonusGuiaJogos,
   },
   {
     name: "Planilha de Periodização de Treinos",
     price: "R$47",
     desc: "Organize seus treinos semanais e mensais com facilidade.",
+    image: bonusPlanilha,
   },
-  { name: "+100 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
+  {
+    name: "+100 brincadeiras aquáticas",
+    price: "R$27",
+    desc: "Tenha mais de 100 ideias adicionais para suas aulas.",
+    image: bonusBrincadeiras,
+  },
 ];
 
 const BonusSection = () => (
