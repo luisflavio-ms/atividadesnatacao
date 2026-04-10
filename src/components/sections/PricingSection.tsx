@@ -90,31 +90,23 @@ const PricingSection = () => {
               </span>
             </div>
 
-            <div className="bg-gradient-to-b from-primary via-primary to-swim-deep rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-[0_8px_40px_hsl(205_85%_45%/0.35)]">
-              <h3 className="font-display text-xl md:text-2xl font-extrabold text-primary-foreground uppercase tracking-wide mb-1 mt-2">
+            <div className="bg-card rounded-2xl border-2 border-primary p-6 md:p-8 flex flex-col items-center text-center shadow-[0_8px_40px_hsl(205_85%_45%/0.2)]">
+              <h3 className="font-display text-xl md:text-2xl font-extrabold text-foreground uppercase tracking-wide mb-1 mt-2">
                 Plano Completo
               </h3>
-              <p className="font-body text-primary-foreground/70 text-sm mb-6">
+              <p className="font-body text-muted-foreground text-sm mb-6">
                 Para transformar suas aulas o ano todo
               </p>
 
-              <span className="font-body text-primary-foreground/60 line-through text-sm">De R$197</span>
+              <span className="font-body text-muted-foreground line-through text-sm">De R$197</span>
               <div className="flex items-baseline gap-0.5 mb-1">
-                <span className="font-body text-primary-foreground/80 text-lg">R$</span>
-                <span className="font-display text-5xl md:text-6xl font-extrabold text-primary-foreground">27</span>
-                <span className="font-body text-primary-foreground/80 text-lg">,90</span>
+                <span className="font-body text-muted-foreground text-lg">R$</span>
+                <span className="font-display text-5xl md:text-6xl font-extrabold text-foreground">27</span>
+                <span className="font-body text-muted-foreground text-lg">,90</span>
               </div>
-              <span className="font-body text-primary-foreground/60 text-xs uppercase tracking-wider mb-8">
+              <span className="font-body text-muted-foreground text-xs uppercase tracking-wider mb-8">
                 Pagamento único
               </span>
-
-              {/* CTA Button */}
-              <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mb-8">
-                <button className="w-full py-4 bg-swim-orange hover:brightness-110 active:scale-[0.98] text-foreground font-body font-extrabold text-lg uppercase rounded-xl shadow-[0_6px_20px_rgba(0,0,0,0.25)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
-                  <Star size={22} className="fill-current stroke-[2]" />
-                  COMPRAR AGORA
-                </button>
-              </a>
 
               {/* Features list */}
               <ul className="space-y-3 mb-6 w-full text-left">
@@ -126,8 +118,8 @@ const PricingSection = () => {
                   "Suporte 24h",
                   "Garantia de 7 dias",
                 ].map((text, i) => (
-                  <li key={i} className="flex items-start gap-3 font-body text-[14px] text-primary-foreground">
-                    <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-emerald-400 flex items-center justify-center">
+                  <li key={i} className="flex items-start gap-3 font-body text-[14px] text-foreground">
+                    <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
                       <Check className="text-white stroke-[3]" size={12} />
                     </span>
                     <span>{text}</span>
@@ -136,17 +128,17 @@ const PricingSection = () => {
               </ul>
 
               {/* Bônus section */}
-              <div className="w-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-5 text-left">
+              <div className="w-full bg-accent/50 border border-primary/20 rounded-xl p-5 text-left mb-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Gift size={18} className="text-swim-orange" />
-                  <span className="font-body font-extrabold text-primary-foreground text-sm">
+                  <span className="font-body font-extrabold text-foreground text-sm">
                     Mais de R$110 reais de bônus GRÁTIS:
                   </span>
                 </div>
                 <ul className="space-y-2">
                   {["Guia de Jogos Aquáticos", "Planilha de Periodização", "+500 Brincadeiras Aquáticas"].map(
                     (text, i) => (
-                      <li key={i} className="flex items-start gap-2 font-body text-[13px] text-primary-foreground/90">
+                      <li key={i} className="flex items-start gap-2 font-body text-[13px] text-foreground/80">
                         <span className="text-swim-orange mt-px">•</span>
                         <span>{text}</span>
                       </li>
@@ -154,6 +146,14 @@ const PricingSection = () => {
                   )}
                 </ul>
               </div>
+
+              {/* CTA Button */}
+              <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full mt-auto">
+                <button className="w-full py-4 bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-body font-extrabold text-lg uppercase rounded-xl shadow-md transition-all flex items-center justify-center gap-2 animate-pulse-soft">
+                  <ShoppingCart size={22} />
+                  COMPRAR AGORA
+                </button>
+              </a>
             </div>
           </div>
         </div>
