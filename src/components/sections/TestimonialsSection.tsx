@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
         <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
-          O Que Dizem <span className="text-gradient">Nossos Clientes</span>
+          O que dizem <span className="text-gradient">nossos clientes</span>
         </h2>
 
         <div className="relative max-w-sm mx-auto">
@@ -40,11 +40,7 @@ const TestimonialsSection = () => {
 
           {/* Image */}
           <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
-            <img
-              src={screenshots[current]}
-              alt={`Depoimento ${current + 1}`}
-              className="w-full h-auto"
-            />
+            <img src={screenshots[current]} alt={`Depoimento ${current + 1}`} className="w-full h-auto" />
           </div>
 
           {/* Dots */}
