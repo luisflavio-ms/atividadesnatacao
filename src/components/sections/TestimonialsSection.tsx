@@ -1,64 +1,69 @@
-import { Star } from "lucide-react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import wpp1 from "@/assets/wpp1.webp";
+import wpp2 from "@/assets/wpp2.webp";
+import wpp3 from "@/assets/wpp3.webp";
+import wpp4 from "@/assets/wpp4.webp";
+import wpp5 from "@/assets/wpp5.webp";
 
-const testimonials = [
-  {
-    name: "Marcos Oliveira",
-    role: "Professor de Natação",
-    city: "São Paulo, SP",
-    text: "Minhas aulas ficaram muito mais dinâmicas! Os alunos adoram as atividades e a retenção na escola aumentou muito. Melhor investimento que fiz.",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Fernanda Costa",
-    role: "Coordenadora de Escola",
-    city: "Rio de Janeiro, RJ",
-    text: "Material incrível! Facilitou demais o planejamento dos nossos professores. As atividades são criativas e fáceis de aplicar. Recomendo demais!",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
-  },
-  {
-    name: "Rafael Santos",
-    role: "Instrutor de Natação",
-    city: "Belo Horizonte, MG",
-    text: "Eu usava sempre as mesmas atividades e os alunos estavam desmotivados. Com esse material, tenho opções para meses sem repetir nada!",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-  },
-];
+const screenshots = [wpp1, wpp2, wpp3, wpp4, wpp5];
 
-const TestimonialsSection = () => (
-  <section className="py-16 md:py-24 bg-background">
-    <div className="container">
-      <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
-        O Que Dizem <span className="text-gradient">Nossos Clientes</span>
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        {testimonials.map((t, i) => (
-          <div
-            key={i}
-            className="scroll-fade bg-card rounded-2xl p-6 border border-border shadow-sm"
+const TestimonialsSection = () => {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c === 0 ? screenshots.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === screenshots.length - 1 ? 0 : c + 1));
+
+  return (
+    <section className="py-16 md:py-24 bg-background">
+      <div className="container">
+        <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
+          O Que Dizem <span className="text-gradient">Nossos Clientes</span>
+        </h2>
+
+        <div className="relative max-w-sm mx-auto">
+          {/* Arrows */}
+          <button
+            onClick={prev}
+            className="absolute -left-4 md:-left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
+            aria-label="Anterior"
           >
-            <div className="flex gap-0.5 mb-4">
-              {[...Array(5)].map((_, j) => (
-                <Star key={j} className="text-swim-gold fill-swim-gold" size={16} />
-              ))}
-            </div>
-            <p className="font-body text-sm text-foreground leading-relaxed mb-5 italic">"{t.text}"</p>
-            <div className="flex items-center gap-3">
-              <img
-                src={t.photo}
-                alt={t.name}
-                className="w-10 h-10 rounded-full object-cover border-2 border-primary/20"
-                loading="lazy"
-              />
-              <div>
-                <p className="font-body font-semibold text-foreground text-sm">{t.name}</p>
-                <p className="font-body text-xs text-muted-foreground">{t.role} • {t.city}</p>
-              </div>
-            </div>
+            <ChevronLeft size={20} className="text-foreground" />
+          </button>
+          <button
+            onClick={next}
+            className="absolute -right-4 md:-right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-accent transition-colors"
+            aria-label="Próximo"
+          >
+            <ChevronRight size={20} className="text-foreground" />
+          </button>
+
+          {/* Image */}
+          <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
+            <img
+              src={screenshots[current]}
+              alt={`Depoimento ${current + 1}`}
+              className="w-full h-auto"
+            />
           </div>
-        ))}
+
+          {/* Dots */}
+          <div className="flex justify-center gap-2 mt-4">
+            {screenshots.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                  i === current ? "bg-primary" : "bg-muted-foreground/30"
+                }`}
+                aria-label={`Ir para depoimento ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default TestimonialsSection;
