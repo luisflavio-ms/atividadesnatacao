@@ -55,11 +55,6 @@ const HeroSection = () => {
               Transforme cada aula num momento que seus alunos <span className="text-gradient">vão querer repetir</span>
             </h1>
 
-            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
-              para usar amanhã.
-            </p>
-
             {/* VSL Video */}
             <div className="relative max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
               <video
@@ -86,6 +81,11 @@ const HeroSection = () => {
                 )}
               </button>
             </div>
+
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
+              para usar amanhã.
+            </p>
 
             <a href="#planos">
               <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
