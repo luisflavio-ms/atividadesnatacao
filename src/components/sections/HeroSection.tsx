@@ -1,8 +1,41 @@
-import CountdownTimer from "@/components/CountdownTimer";
+import { useEffect, useRef, useState } from "react";
+import Hls from "hls.js";
 import { Button } from "@/components/ui/button";
+import { Volume2, VolumeX } from "lucide-react";
 
 const HeroSection = () => {
   const today = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const src = "https://cdn.fastmotion.io/21d87051-c4ec-4a84-845a-7afb76d15b08/playlist.m3u8";
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(src);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        video.play().catch(() => {});
+      });
+      return () => hls.destroy();
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = src;
+      video.addEventListener("loadedmetadata", () => {
+        video.play().catch(() => {});
+      });
+    }
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
 
   return (
     <>
@@ -26,6 +59,33 @@ const HeroSection = () => {
               300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
               para usar amanhã.
             </p>
+
+            {/* VSL Video */}
+            <div className="relative max-w-2xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
+              <video
+                ref={videoRef}
+                className="w-full aspect-video bg-black"
+                muted
+                autoPlay
+                playsInline
+              />
+              <button
+                onClick={toggleMute}
+                className="absolute bottom-4 right-4 flex items-center gap-2 bg-foreground/80 hover:bg-foreground text-background font-body font-bold text-sm px-4 py-2.5 rounded-full backdrop-blur-sm transition-all shadow-lg"
+              >
+                {isMuted ? (
+                  <>
+                    <VolumeX className="w-4 h-4" />
+                    Clique para ativar o som
+                  </>
+                ) : (
+                  <>
+                    <Volume2 className="w-4 h-4" />
+                    Som ativado
+                  </>
+                )}
+              </button>
+            </div>
 
             <a href="#planos">
               <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
