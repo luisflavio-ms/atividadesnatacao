@@ -19,8 +19,8 @@ const HeroSection = () => {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-              <span className="text-gradient">300 Atividades</span> prontas e criativas para{" "}
-              <span className="text-gradient">transformar</span>suas Aulas de Natação{" "}
+              <span className="text-gradient">300 Atividades</span> prontas e organizadas para{" "}
+              <span className="text-gradient">transformar</span> suas Aulas de Natação{" "}
               <span className="text-gradient">+ bônus</span>
             </h1>
 
