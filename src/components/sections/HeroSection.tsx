@@ -19,28 +19,19 @@ const HeroSection = () => {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-              Transforme cada aula num momento que seus alunos{" "}
-              <span className="text-gradient">vão querer repetir</span>
+              Transforme cada aula num momento que seus alunos <span className="text-gradient">vão querer repetir</span>
             </h1>
 
             <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas para usar amanhã.
+              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
+              para usar amanhã.
             </p>
 
             <a href="#planos">
               <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
-                👉 QUERO ACESSAR AGORA
+                QUERO ACESSAR AGORA
               </Button>
             </a>
-
-            {/* Timer */}
-            <div className="mt-12">
-              <p className="font-body text-sm text-muted-foreground mb-3 uppercase tracking-wider font-semibold">
-                ⏰ Oferta expira em:
-              </p>
-              <CountdownTimer />
-            </div>
-
             {/* Social proof */}
             <p className="mt-6 font-body text-[15px] text-muted-foreground">
               🔥 <span className="font-bold text-foreground">+2.450 professores</span> já compraram
