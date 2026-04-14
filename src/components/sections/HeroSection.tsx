@@ -61,10 +61,10 @@ const HeroSection = () => {
             </p>
 
             {/* VSL Video */}
-            <div className="relative max-w-2xl mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
+            <div className="relative max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
               <video
                 ref={videoRef}
-                className="w-full aspect-video bg-black"
+                className="w-full aspect-[9/16] object-cover"
                 muted
                 autoPlay
                 playsInline
