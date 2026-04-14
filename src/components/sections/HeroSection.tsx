@@ -55,11 +55,6 @@ const HeroSection = () => {
               Transforme cada aula num momento que seus alunos <span className="text-gradient">vão querer repetir</span>
             </h1>
 
-            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
-              para usar amanhã.
-            </p>
-
             {/* VSL Video */}
             <div className="relative max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
               <video
