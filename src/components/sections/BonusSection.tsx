@@ -47,10 +47,10 @@ const BonusSection = () => (
               key={i}
               className="scroll-fade flex flex-col bg-background rounded-2xl overflow-hidden border border-accent/20 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1"
             >
+              <div className="w-full flex items-center justify-center p-4 bg-accent/5">
+                <img src={b.image} alt={b.name} className="w-full h-auto object-contain" />
+              </div>
               <div className="flex flex-col flex-grow p-6 text-left">
-                <div className="w-20 h-20 rounded-xl flex items-center justify-center mb-3 mx-auto">
-                  <img src={b.image} alt={b.name} className="w-full h-full object-contain" />
-                </div>
                 <h3 className="font-body font-bold text-foreground text-base mb-2 text-center">{b.name}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4 text-center">{b.desc}</p>
 
