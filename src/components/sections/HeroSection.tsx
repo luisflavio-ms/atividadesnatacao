@@ -52,18 +52,13 @@ const HeroSection = () => {
         <div className="container relative">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-              Transforme cada aula num momento que seus alunos <span className="text-gradient">vão querer repetir</span>
+              <span className="text-gradient">+300 Atividades</span> prontas para suas
+              <span className="text-gradient">Aulas de Natação</span> + Bônus (Use Hoje)
             </h1>
 
             {/* VSL Video */}
             <div className="relative max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
-              <video
-                ref={videoRef}
-                className="w-full aspect-[9/16] object-cover"
-                muted
-                autoPlay
-                playsInline
-              />
+              <video ref={videoRef} className="w-full aspect-[9/16] object-cover" muted autoPlay playsInline />
               <button
                 onClick={toggleMute}
                 className="absolute bottom-4 right-4 flex items-center gap-2 bg-foreground/80 hover:bg-foreground text-background font-body font-bold text-sm px-4 py-2.5 rounded-full backdrop-blur-sm transition-all shadow-lg"
