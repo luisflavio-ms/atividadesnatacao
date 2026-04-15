@@ -1,17 +1,27 @@
 import { Gift } from "lucide-react";
+import bonusGuiaJogos from "@/assets/bonus-guia-jogos.png";
+import bonusPlanilha from "@/assets/bonus-planilha.png";
+import bonus100Brincadeiras from "@/assets/bonus-100brincadeiras.png";
 
 const bonuses = [
   {
     name: "Guia de Jogos Aquáticos para Crianças",
     price: "R$37",
     desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis.",
+    image: bonusGuiaJogos,
   },
   {
     name: "Planilha de Periodização de Treinos",
     price: "R$47",
     desc: "Organize seus treinos semanais e mensais com facilidade.",
+    image: bonusPlanilha,
   },
-  { name: "+100 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
+  {
+    name: "+100 brincadeiras aquáticas",
+    price: "R$27",
+    desc: "Tenha mais de 100 ideias adicionais para suas aulas.",
+    image: bonus100Brincadeiras,
+  },
 ];
 
 const BonusSection = () => (
@@ -38,11 +48,11 @@ const BonusSection = () => (
               className="scroll-fade flex flex-col bg-background rounded-2xl overflow-hidden border border-accent/20 shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1"
             >
               <div className="flex flex-col flex-grow p-6 text-left">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
-                  <Gift className="text-primary" size={20} />
+                <div className="w-20 h-20 rounded-xl flex items-center justify-center mb-3 mx-auto">
+                  <img src={b.image} alt={b.name} className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-body font-bold text-foreground text-base mb-2">{b.name}</h3>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{b.desc}</p>
+                <h3 className="font-body font-bold text-foreground text-base mb-2 text-center">{b.name}</h3>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4 text-center">{b.desc}</p>
 
                 <div className="mt-auto pt-3 border-t border-border/50 flex flex-col gap-1">
                   <span className="font-body text-muted-foreground text-sm uppercase tracking-wider font-medium">
