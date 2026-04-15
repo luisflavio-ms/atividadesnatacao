@@ -5,7 +5,7 @@ import WaveDivider from "@/components/WaveDivider";
 
 const BenefitsSection = lazy(() => import("@/components/sections/BenefitsSection"));
 const DeliverablesSection = lazy(() => import("@/components/sections/DeliverablesSection"));
-const DifferentialsSection = lazy(() => import("@/components/sections/DifferentialsSection"));
+
 const BonusSection = lazy(() => import("@/components/sections/BonusSection"));
 const PricingSection = lazy(() => import("@/components/sections/PricingSection"));
 const TestimonialsSection = lazy(() => import("@/components/sections/TestimonialsSection"));
@@ -40,7 +40,7 @@ const Index = () => {
         <WaveDivider color="hsl(var(--background))" />
         <DeliverablesSection />
         <WaveDivider color="hsl(var(--card))" />
-        <DifferentialsSection />
+        <WaveDivider color="hsl(var(--card))" />
         <BonusSection />
         <WaveDivider color="hsl(var(--card))" />
         <PricingSection />
