@@ -1,41 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import Hls from "hls.js";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Volume2, VolumeX } from "lucide-react";
+import produtoImage from "@/assets/mockup-produto.png";
 
 const HeroSection = () => {
   const today = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isMuted, setIsMuted] = useState(true);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const src = "https://cdn.fastmotion.io/21d87051-c4ec-4a84-845a-7afb76d15b08/playlist.m3u8";
-
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(src);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(() => {});
-      });
-      return () => hls.destroy();
-    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      video.src = src;
-      video.addEventListener("loadedmetadata", () => {
-        video.play().catch(() => {});
-      });
-    }
-  }, []);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
     <>
@@ -56,25 +24,13 @@ const HeroSection = () => {
               <span className="text-gradient">Aulas de Natação</span> + Bônus (Use Hoje)
             </h1>
 
-            {/* VSL Video */}
-            <div className="relative max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-border">
-              <video ref={videoRef} className="w-full aspect-[9/16] object-cover" muted autoPlay playsInline />
-              <button
-                onClick={toggleMute}
-                className="absolute bottom-4 right-4 flex items-center gap-2 bg-foreground/80 hover:bg-foreground text-background font-body font-bold text-sm px-4 py-2.5 rounded-full backdrop-blur-sm transition-all shadow-lg"
-              >
-                {isMuted ? (
-                  <>
-                    <VolumeX className="w-4 h-4" />
-                    Clique para ativar o som
-                  </>
-                ) : (
-                  <>
-                    <Volume2 className="w-4 h-4" />
-                    Som ativado
-                  </>
-                )}
-              </button>
+            {/* Produto Image */}
+            <div className="relative max-w-md mx-auto mb-8">
+              <img
+                src={produtoImage}
+                alt="300 Atividades Prontas para Aulas de Natação"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
             </div>
 
             <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
