@@ -24,19 +24,19 @@ const HeroSection = () => {
               <span className="text-gradient">Aulas de Natação</span> + Bônus (Use Hoje)
             </h1>
 
+            {/* Subheadline */}
+            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
+              Um guia completo com atividades testadas, organizadas e prontas para usar sem complicação
+            </p>
+
             {/* Produto Image */}
             <div className="relative max-w-md mx-auto mb-8">
               <img
                 src={produtoImage}
                 alt="300 Atividades Prontas para Aulas de Natação"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto rounded-2xl"
               />
             </div>
-
-            <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              300 atividades criativas e eficazes para crianças, jovens e adultos — do iniciante ao avançado, prontas
-              para usar amanhã.
-            </p>
 
             <a href="#planos">
               <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
