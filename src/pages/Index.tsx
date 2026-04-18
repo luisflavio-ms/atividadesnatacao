@@ -18,17 +18,6 @@ const ExitPopup = lazy(() => import("@/components/ExitPopup"));
 const SocialProofNotifications = lazy(() => import("@/components/SocialProofNotifications"));
 
 const Index = () => {
-  const params = new URLSearchParams(window.location.search);
-  const hasUtm = params.has("utm_source");
-
-  if (!hasUtm) {
-    return (
-      <div className="min-h-screen bg-background pb-16 md:pb-0">
-        <HeroSection />
-      </div>
-    );
-  }
-
   useScrollFade();
 
   return (
