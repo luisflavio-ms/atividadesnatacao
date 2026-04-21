@@ -18,13 +18,11 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            <span className="text-gradient">300 Atividades</span> prontas e criativas para transformar suas{" "}
-            <span className="text-gradient">Aulas de Natação + bônus</span>
+            <span className="text-gradient">300 Atividades</span> Prontas para Aulas de Natação que{" "}
+            <span className="text-gradient">Encantam</span> seus Alunos{" "}
           </h1>
-
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Economize horas de planejamento e surpreenda seus alunos com exercícios dinâmicos, divertidos e eficazes
-            para todas as idades e níveis.
+            Economize horas de planejamento e tenha aulas mais divertidas, organizadas e eficazes para todas as idades.
           </p>
 
           <a href="#planos">
