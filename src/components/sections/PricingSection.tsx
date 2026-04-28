@@ -47,9 +47,9 @@ const PricingSection = () => {
               </h3>
 
               <span className="font-body text-muted-foreground font-medium line-through text-sm mb-1">R$97</span>
-              <span className="font-display text-4xl font-bold text-foreground mb-2 tracking-tight">R$10,00</span>
+              <span className="font-display text-4xl font-bold text-foreground mb-2 tracking-tight">R$17,90</span>
               <span className="font-body text-muted-foreground text-sm mb-1">pagamento único</span>
-              <span className="font-body text-muted-foreground font-semibold text-sm mb-8">Você economiza R$87,00</span>
+              <span className="font-body text-muted-foreground font-semibold text-sm mb-8">Você economiza R$79,10</span>
 
               <ul className="space-y-4 mb-8 w-full text-left">
                 {[
@@ -94,10 +94,10 @@ const PricingSection = () => {
 
               <span className="font-body text-muted-foreground font-medium line-through text-[17px] mb-1">R$197</span>
               <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight">
-                R$27,90
+                R$32,90
               </span>
               <span className="font-body text-muted-foreground text-[15px] mb-1">pagamento único</span>
-              <span className="font-body text-primary font-bold text-[15px] mb-8">Você economiza R$169,10</span>
+              <span className="font-body text-primary font-bold text-[15px] mb-8">Você economiza R$164,10</span>
 
               <ul className="space-y-4 mb-8 w-full text-left">
                 {[
@@ -173,8 +173,8 @@ const PricingSection = () => {
               <p className="font-display font-bold text-lg text-foreground mb-1">Pacote Promocional</p>
               <p className="text-muted-foreground text-sm mb-2">300 Atividades + Todos os Bônus</p>
               <div className="flex items-baseline gap-2 mb-3">
-                <span className="text-muted-foreground line-through text-sm">R$27,90</span>
-                <span className="font-display text-3xl font-bold text-primary">R$17,90</span>
+                <span className="text-muted-foreground line-through text-sm">R$32,90</span>
+                <span className="font-display text-3xl font-bold text-primary">R$24,90</span>
               </div>
               <a href={getUrl("https://pay.wiapy.com/isE8Yjmic")} className="block">
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
@@ -188,7 +188,7 @@ const PricingSection = () => {
               href={getUrl("https://pay.wiapy.com/RWaVaArGQ7")}
               className="block text-center text-muted-foreground text-sm underline hover:text-foreground transition-colors"
             >
-              Não, quero continuar com o pacote de R$10,00
+              Não, quero continuar com o pacote de R$17,90
             </a>
           </div>
         </DialogContent>
