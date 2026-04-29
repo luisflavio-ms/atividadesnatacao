@@ -4,10 +4,17 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 
 const PricingSection = () => {
   const [showPromoModal, setShowPromoModal] = useState(false);
+  const [showSecondPromoModal, setShowSecondPromoModal] = useState(false);
 
   const handleNormalClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setShowPromoModal(true);
+  };
+
+  const handleDeclineFirstPromo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowPromoModal(false);
+    setShowSecondPromoModal(true);
   };
 
   const getUrl = (url: string) => {
@@ -180,6 +187,47 @@ const PricingSection = () => {
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   QUERO ESTA OFERTA
+                </button>
+              </a>
+            </div>
+
+            <a
+              href="#"
+              onClick={handleDeclineFirstPromo}
+              className="block text-center text-muted-foreground text-sm underline hover:text-foreground transition-colors"
+            >
+              Não, quero continuar com o pacote de R$17,90
+            </a>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Segundo Modal Promocional - R$21,90 */}
+      <Dialog open={showSecondPromoModal} onOpenChange={setShowSecondPromoModal}>
+        <DialogContent className="max-w-md rounded-2xl p-0 overflow-hidden">
+          <div className="bg-gradient-to-br from-swim-orange to-primary p-6 text-center">
+            <DialogHeader>
+              <DialogTitle className="text-primary-foreground font-display text-2xl font-bold">
+                🔥 Última Chance!
+              </DialogTitle>
+              <DialogDescription className="text-primary-foreground/90 text-base mt-2">
+                Tudo bem, vamos fazer ainda melhor por você!
+              </DialogDescription>
+            </DialogHeader>
+          </div>
+
+          <div className="p-6 space-y-4">
+            <div className="bg-accent/50 rounded-xl p-4 border-2 border-primary">
+              <p className="font-display font-bold text-lg text-foreground mb-1">Oferta Final Exclusiva</p>
+              <p className="text-muted-foreground text-sm mb-2">300 Atividades + Todos os Bônus</p>
+              <div className="flex items-baseline gap-2 mb-3">
+                <span className="text-muted-foreground line-through text-sm">R$24,90</span>
+                <span className="font-display text-3xl font-bold text-primary">R$21,90</span>
+              </div>
+              <a href={getUrl("https://pay.wiapy.com/ahfg7eAr2")} className="block">
+                <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                  <Gift size={18} />
+                  SIM, QUERO POR R$21,90
                 </button>
               </a>
             </div>
