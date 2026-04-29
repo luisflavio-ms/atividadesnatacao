@@ -4,10 +4,17 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 
 const PricingSection = () => {
   const [showPromoModal, setShowPromoModal] = useState(false);
+  const [showSecondPromoModal, setShowSecondPromoModal] = useState(false);
 
   const handleNormalClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setShowPromoModal(true);
+  };
+
+  const handleDeclineFirstPromo = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowPromoModal(false);
+    setShowSecondPromoModal(true);
   };
 
   const getUrl = (url: string) => {
