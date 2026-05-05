@@ -92,7 +92,7 @@ const PricingSection = () => {
                 MAIS VENDIDO
               </span>
             </div>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1.5 rounded-full bg-gradient-to-r from-primary to-swim-aqua"></div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1.5 rounded-full bg-primary"></div>
 
             <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-[0_8px_40px_hsl(205_85%_45%/0.18)] flex flex-col items-center text-center border-2 border-primary ring-2 ring-primary/10">
               <h3 className="font-display text-2xl font-bold text-foreground mb-5 tracking-wide mt-4">
@@ -150,7 +150,7 @@ const PricingSection = () => {
 
               <div className="mt-auto w-full pt-2">
                 <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full">
-                  <button className="w-full py-5 bg-gradient-cta hover:brightness-110 active:scale-[0.98] text-primary-foreground font-body font-extrabold text-xl rounded-full shadow-[0_10px_30px_hsl(205_85%_45%/0.4)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
+                  <button className="w-full py-5 bg-swim-orange hover:bg-swim-orange/90 active:scale-[0.98] text-white font-body font-extrabold text-xl rounded-full shadow-xl shadow-swim-orange/40 transition-all flex items-center justify-center gap-2">
                     <Star size={24} className="stroke-[2.5]" />
                     QUERO O PREMIUM
                   </button>
@@ -164,7 +164,7 @@ const PricingSection = () => {
       {/* Modal Promocional */}
       <Dialog open={showPromoModal} onOpenChange={setShowPromoModal}>
         <DialogContent className="max-w-md rounded-2xl p-0 overflow-hidden">
-          <div className="bg-gradient-to-br from-primary to-swim-deep p-6 text-center">
+          <div className="bg-primary p-6 text-center">
             <DialogHeader>
               <DialogTitle className="text-primary-foreground font-display text-2xl font-bold">
                 🎉 Espere! Oferta Especial
@@ -184,7 +184,7 @@ const PricingSection = () => {
                 <span className="font-display text-3xl font-bold text-primary">R$24,90</span>
               </div>
               <a href={getUrl("https://pay.wiapy.com/isE8Yjmic")} className="block">
-                <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                <button className="w-full py-3 bg-swim-orange hover:bg-swim-orange/90 text-white font-body font-bold text-base rounded-full shadow-lg transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   QUERO ESTA OFERTA
                 </button>
@@ -205,7 +205,7 @@ const PricingSection = () => {
       {/* Segundo Modal Promocional - R$21,90 */}
       <Dialog open={showSecondPromoModal} onOpenChange={setShowSecondPromoModal}>
         <DialogContent className="max-w-md rounded-2xl p-0 overflow-hidden">
-          <div className="bg-gradient-to-br from-swim-orange to-primary p-6 text-center">
+          <div className="bg-swim-orange p-6 text-center">
             <DialogHeader>
               <DialogTitle className="text-primary-foreground font-display text-2xl font-bold">
                 🔥 Última Chance!
@@ -225,7 +225,7 @@ const PricingSection = () => {
                 <span className="font-display text-3xl font-bold text-primary">R$21,90</span>
               </div>
               <a href={getUrl("https://pay.wiapy.com/ahfg7eAr2")} className="block">
-                <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                <button className="w-full py-3 bg-swim-orange hover:bg-swim-orange/90 text-white font-body font-bold text-base rounded-full shadow-lg transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   SIM, QUERO POR R$21,90
                 </button>
