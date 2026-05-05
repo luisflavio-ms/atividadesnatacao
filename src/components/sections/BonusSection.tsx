@@ -1,17 +1,27 @@
 import { Gift } from "lucide-react";
+import bonusJogos from "@/assets/bonus-jogos.png";
+import bonusPlanilha from "@/assets/bonus-planilha.png";
+import bonusBrincadeiras from "@/assets/bonus-brincadeiras.png";
 
 const bonuses = [
   {
     name: "Guia de Jogos Aquáticos para Crianças",
     price: "R$37",
     desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis.",
+    image: bonusJogos,
   },
   {
     name: "Planilha de Periodização de Treinos",
     price: "R$47",
     desc: "Organize seus treinos semanais e mensais com facilidade.",
+    image: bonusPlanilha,
   },
-  { name: "+100 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
+  {
+    name: "+100 brincadeiras aquáticas",
+    price: "R$27",
+    desc: "Tenha mais de 100 ideias adicionais para suas aulas.",
+    image: bonusBrincadeiras,
+  },
 ];
 
 const BonusSection = () => (
@@ -37,11 +47,8 @@ const BonusSection = () => (
               key={i}
               className="scroll-fade flex flex-col bg-background rounded-2xl overflow-hidden border-2 border-border shadow-lg hover:shadow-2xl hover:border-swim-orange/40 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="h-1.5 bg-swim-orange" />
+              <img src={b.image} alt={b.name} className="w-full h-auto block" loading="lazy" />
               <div className="flex flex-col flex-grow p-6 text-left">
-                <div className="w-12 h-12 bg-swim-orange/15 rounded-xl flex items-center justify-center mb-3">
-                  <Gift className="text-swim-orange" size={22} />
-                </div>
                 <h3 className="font-display font-bold text-foreground text-base mb-2">{b.name}</h3>
                 <p className="font-body text-xs text-muted-foreground leading-relaxed mb-4">{b.desc}</p>
 
