@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -27,30 +27,34 @@ const testimonials = [
 const TestimonialsSection = () => (
   <section className="py-16 md:py-24 bg-background">
     <div className="container">
-      <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
-        O Que Dizem <span className="text-gradient">Nossos Clientes</span>
+      <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-3">
+        O Que Dizem <span className="text-primary">Nossos Clientes</span>
       </h2>
+      <p className="font-body text-muted-foreground text-center text-sm md:text-base mb-12">
+        Mais de 2.450 professores transformaram suas aulas
+      </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {testimonials.map((t, i) => (
           <div
             key={i}
-            className="scroll-fade bg-card rounded-2xl p-6 border border-border shadow-sm"
+            className="scroll-fade relative bg-card rounded-2xl p-6 border border-border shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
-            <div className="flex gap-0.5 mb-4">
+            <Quote className="absolute top-4 right-4 text-primary/15" size={40} />
+            <div className="flex gap-0.5 mb-4 relative">
               {[...Array(5)].map((_, j) => (
                 <Star key={j} className="text-swim-gold fill-swim-gold" size={16} />
               ))}
             </div>
-            <p className="font-body text-sm text-foreground leading-relaxed mb-5 italic">"{t.text}"</p>
-            <div className="flex items-center gap-3">
+            <p className="font-body text-sm text-foreground leading-relaxed mb-5 relative">"{t.text}"</p>
+            <div className="flex items-center gap-3 pt-4 border-t border-border">
               <img
                 src={t.photo}
                 alt={t.name}
-                className="w-10 h-10 rounded-full object-cover border-2 border-primary/20"
+                className="w-11 h-11 rounded-full object-cover border-2 border-primary/30"
                 loading="lazy"
               />
               <div>
-                <p className="font-body font-semibold text-foreground text-sm">{t.name}</p>
+                <p className="font-body font-bold text-foreground text-sm">{t.name}</p>
                 <p className="font-body text-xs text-muted-foreground">{t.role} • {t.city}</p>
               </div>
             </div>
