@@ -55,10 +55,10 @@ const CountdownTimer = ({ compact = false }: CountdownTimerProps) => {
         { value: time.seconds, label: "Seg" },
       ].map((item, i) => (
         <div key={i} className="flex flex-col items-center">
-          <div className="bg-primary text-white font-display font-extrabold text-2xl md:text-3xl rounded-xl w-16 md:w-20 h-16 md:h-20 flex items-center justify-center tabular-nums shadow-md shadow-primary/30">
+          <div className="bg-foreground/90 text-background font-body font-bold text-2xl md:text-3xl rounded-lg w-16 md:w-20 h-16 md:h-20 flex items-center justify-center tabular-nums animate-countdown">
             {pad(item.value)}
           </div>
-          <span className="text-xs mt-2 text-muted-foreground font-body uppercase tracking-wider font-bold">
+          <span className="text-xs mt-1 text-muted-foreground font-body uppercase tracking-wider">
             {item.label}
           </span>
         </div>

@@ -77,15 +77,16 @@
   }
 
   .text-gradient {
-    @apply text-primary;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--swim-blue)), hsl(var(--swim-aqua)));
   }
 
   .bg-gradient-cta {
-    background-color: hsl(var(--swim-orange));
+    background: linear-gradient(135deg, hsl(var(--swim-blue)), hsl(205 85% 35%));
   }
 
   .bg-gradient-sage {
-    background-color: hsl(var(--secondary));
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(190 65% 50%));
   }
 
   .section-wave {
@@ -103,79 +104,33 @@
   .animate-countdown {
     animation: countdownPulse 1s ease-in-out infinite;
   }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-float-slow {
-    animation: float 9s ease-in-out infinite;
-  }
-
-  .animate-bubble {
-    animation: bubble 8s linear infinite;
-  }
-
-  .animate-shimmer {
-    background-size: 200% auto;
-    animation: shimmer 3s linear infinite;
-  }
-
-  .animate-wiggle {
-    animation: wiggle 2.5s ease-in-out infinite;
-  }
-
-  .bg-gradient-hero {
-    background: linear-gradient(135deg, hsl(var(--swim-sky) / 0.18) 0%, hsl(var(--swim-aqua) / 0.12) 50%, hsl(var(--swim-gold) / 0.12) 100%);
-  }
-
-  .text-gradient-vivid {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(90deg, hsl(var(--swim-blue)), hsl(var(--swim-aqua)), hsl(var(--swim-orange)), hsl(var(--swim-blue)));
-    background-size: 200% auto;
-  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulseSoft {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 hsl(var(--swim-orange) / 0.5);
+    box-shadow: 0 0 0 0 hsl(205 85% 45% / 0.4);
   }
   50% {
-    transform: scale(1.04);
-    box-shadow: 0 0 30px 8px hsl(var(--swim-orange) / 0.35);
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 5px hsl(205 85% 45% / 0.2);
   }
 }
 
 @keyframes countdownPulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(4deg); }
-}
-
-@keyframes bubble {
-  0% { transform: translateY(0) scale(1); opacity: 0; }
-  10% { opacity: 0.7; }
-  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
-}
-
-@keyframes shimmer {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes wiggle {
-  0%, 100% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
 }
 
 .scroll-fade {

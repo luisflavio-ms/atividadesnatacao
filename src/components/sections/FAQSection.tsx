@@ -18,16 +18,12 @@ const FAQSection = () => (
   <section className="py-16 md:py-24 bg-card">
     <div className="container">
       <h2 className="font-display text-2xl md:text-4xl font-bold text-center text-foreground mb-12">
-        Perguntas <span className="text-primary">Frequentes</span>
+        Perguntas <span className="text-gradient">Frequentes</span>
       </h2>
       <div className="max-w-2xl mx-auto">
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (
-            <AccordionItem
-              key={i}
-              value={`faq-${i}`}
-              className="bg-background border border-border rounded-xl px-5 overflow-hidden shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
-            >
+            <AccordionItem key={i} value={`faq-${i}`} className="bg-background border border-border rounded-xl px-5 overflow-hidden">
               <AccordionTrigger className="font-body font-semibold text-foreground text-sm md:text-base text-left py-5 hover:no-underline">
                 {faq.q}
               </AccordionTrigger>

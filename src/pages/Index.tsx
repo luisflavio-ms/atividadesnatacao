@@ -21,7 +21,7 @@ const Index = () => {
   useScrollFade();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-16 md:pb-0">
       <HeroSection />
       <WaveDivider color="hsl(var(--card))" />
       <Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center opacity-0">...</div>}>
@@ -53,6 +53,8 @@ const Index = () => {
             </p>
           </div>
         </footer>
+
+        <StickyBar />
 
         <SocialProofNotifications />
       </Suspense>
