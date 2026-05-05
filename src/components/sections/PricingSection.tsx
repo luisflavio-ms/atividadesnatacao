@@ -92,7 +92,7 @@ const PricingSection = () => {
                 MAIS VENDIDO
               </span>
             </div>
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1.5 rounded-full bg-primary"></div>
+            
 
             <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-[0_8px_40px_hsl(205_85%_45%/0.18)] flex flex-col items-center text-center border-2 border-primary ring-2 ring-primary/10">
               <h3 className="font-display text-2xl font-bold text-foreground mb-5 tracking-wide mt-4">
@@ -150,7 +150,7 @@ const PricingSection = () => {
 
               <div className="mt-auto w-full pt-2">
                 <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full">
-                  <button className="w-full py-5 bg-swim-orange hover:bg-swim-orange/90 active:scale-[0.98] text-white font-body font-extrabold text-xl rounded-full shadow-xl shadow-swim-orange/40 transition-all flex items-center justify-center gap-2">
+                  <button className="w-full py-5 bg-green-600 hover:bg-green-700 active:scale-[0.98] text-white font-body font-extrabold text-xl rounded-full shadow-xl shadow-green-600/40 transition-all flex items-center justify-center gap-2">
                     <Star size={24} className="stroke-[2.5]" />
                     QUERO O PREMIUM
                   </button>
