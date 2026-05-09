@@ -224,7 +224,7 @@ const PricingSection = () => {
                 <span className="text-muted-foreground line-through text-sm">R$24,90</span>
                 <span className="font-display text-3xl font-bold text-primary">R$21,90</span>
               </div>
-              <a href={getUrl("https://pay.wiapy.com/ahfg7eAr2")} className="block">
+              <a href={getUrl("https://pay.lowify.com.br/go.php?offer=wf54rhe")} className="block">
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   SIM, QUERO POR R$21,90
