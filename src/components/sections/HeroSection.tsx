@@ -18,11 +18,10 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            <span className="text-gradient">300 Atividades</span> Prontas para Aulas de Natação que{" "}
-            <span className="text-gradient">Encantam</span> seus Alunos{" "}
+            Mais de <span className="text-gradient">300 atividades de natação</span> para transformar suas aulas em <span className="text-gradient">experiências inesquecíveis</span>
           </h1>
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Economize horas de planejamento e tenha aulas mais divertidas, organizadas e eficazes para todas as idades.
+            Tenha acesso a um acervo completo de atividades práticas, divertidas e fáceis de aplicar para tornar suas aulas mais dinâmicas, engajar seus alunos e aumentar a satisfação dentro da piscina.
           </p>
 
           <a href="#planos">
