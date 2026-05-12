@@ -149,7 +149,7 @@ const PricingSection = () => {
               </ul>
 
               <div className="mt-auto w-full pt-2">
-                <a href={getUrl("https://pay.lowify.com.br/checkout.php?product_id=lDM9u6")} className="block w-full">
+                <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full">
                   <button className="w-full py-5 bg-gradient-cta hover:brightness-110 active:scale-[0.98] text-primary-foreground font-body font-extrabold text-xl rounded-full shadow-[0_10px_30px_hsl(205_85%_45%/0.4)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
                     <Star size={24} className="stroke-[2.5]" />
                     QUERO O PREMIUM
@@ -183,7 +183,7 @@ const PricingSection = () => {
                 <span className="text-muted-foreground line-through text-sm">R$32,90</span>
                 <span className="font-display text-3xl font-bold text-primary">R$24,90</span>
               </div>
-              <a href={getUrl("https://pay.lowify.com.br/go.php?offer=3qcv1fa")} className="block">
+              <a href={getUrl("https://pay.wiapy.com/isE8Yjmic")} className="block">
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   QUERO ESTA OFERTA
@@ -224,7 +224,7 @@ const PricingSection = () => {
                 <span className="text-muted-foreground line-through text-sm">R$24,90</span>
                 <span className="font-display text-3xl font-bold text-primary">R$21,90</span>
               </div>
-              <a href={getUrl("https://pay.lowify.com.br/go.php?offer=wf54rhe")} className="block">
+              <a href={getUrl("https://pay.wiapy.com/ahfg7eAr2")} className="block">
                 <button className="w-full py-3 bg-gradient-cta text-primary-foreground font-body font-bold text-base rounded-full shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
                   <Gift size={18} />
                   SIM, QUERO POR R$21,90
@@ -233,7 +233,7 @@ const PricingSection = () => {
             </div>
 
             <a
-              href={getUrl("https://pay.lowify.com.br/checkout?product_id=P6O2Wy")}
+              href={getUrl("https://pay.wiapy.com/RWaVaArGQ7")}
               className="block text-center text-muted-foreground text-sm underline hover:text-foreground transition-colors"
             >
               Não, quero continuar com o pacote de R$17,90
