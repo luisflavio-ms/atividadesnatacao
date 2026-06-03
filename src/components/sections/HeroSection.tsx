@@ -17,11 +17,12 @@ const HeroSection = () => {
             🏊 OFERTA ESPECIAL — SÓ HOJE {today}
           </div>
 
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            Mais de <span className="text-gradient">300 atividades de natação</span> para transformar suas aulas em <span className="text-gradient">experiências inesquecíveis</span>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-tight mb-6">
+            <span className="text-gradient block mb-2">Domine a Piscina!</span>
+            Mais de <span className="text-primary underline decoration-accent/30">300 Atividades</span> de Natação para Aulas Inesquecíveis
           </h1>
-          <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Tenha acesso a um acervo completo de atividades práticas, divertidas e fáceis de aplicar para tornar suas aulas mais dinâmicas, engajar seus alunos e aumentar a satisfação dentro da piscina.
+          <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+            Economize horas de planejamento com um <span className="text-foreground font-semibold italic">acervo prático e divertido</span>. Aumente o engajamento dos seus alunos e torne-se o professor mais desejado da sua região.
           </p>
 
           <a href="#planos">
