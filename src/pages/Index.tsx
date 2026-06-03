@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect, useRef } from "react";
 import useScrollFade from "@/hooks/useScrollFade";
 import HeroSection from "@/components/sections/HeroSection";
 import WaveDivider from "@/components/WaveDivider";
+import TopBanner from "@/components/TopBanner";
 
 const PainPointsSection = lazy(() => import("@/components/sections/PainPointsSection"));
 const BenefitsSection = lazy(() => import("@/components/sections/BenefitsSection"));
@@ -23,6 +24,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background pb-16 md:pb-0">
+      <TopBanner />
       <HeroSection />
       <WaveDivider color="hsl(var(--card))" />
       <Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center opacity-0">...</div>}>
