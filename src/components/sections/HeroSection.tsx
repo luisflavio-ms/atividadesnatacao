@@ -12,46 +12,6 @@ const HeroSection = () => {
 
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Product Mockup */}
-          <div className="mb-10 flex justify-center">
-            <div className="relative w-full max-w-[450px] aspect-[16/10]">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-2xl" />
-              <div className="relative h-full w-full bg-card border-2 border-primary/20 rounded-2xl shadow-2xl overflow-hidden group hover:scale-[1.02] transition-transform duration-500">
-                <div className="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors" />
-                
-                {/* Visual representation of an ebook/digital course */}
-                <div className="flex h-full">
-                  <div className="w-1/3 bg-gradient-to-b from-primary to-primary-dark p-4 flex flex-col justify-between text-white text-left">
-                    <div className="text-xl md:text-2xl font-display font-bold leading-tight">Aqua Atividades</div>
-                    <div className="text-[10px] opacity-70 uppercase tracking-widest font-bold">Guia Prático</div>
-                  </div>
-                  <div className="flex-1 p-6 flex flex-col justify-center items-center text-center space-y-4">
-                    <div className="w-16 h-1 bg-primary/20 rounded-full" />
-                    <div className="text-2xl md:text-3xl font-display font-bold text-primary italic">+300</div>
-                    <div className="text-xs md:text-sm font-body font-semibold text-muted-foreground uppercase tracking-widest">Atividades de Natação</div>
-                    <div className="w-12 h-1 bg-secondary/20 rounded-full" />
-                    <div className="flex gap-2">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm">🏊</div>
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm">⚡</div>
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm">✨</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Glass reflection effect */}
-                <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
-              </div>
-
-              {/* Badges/Floating elements */}
-              <div className="absolute -top-3 -right-3 bg-accent text-accent-foreground font-bold py-1.5 px-3 rounded-lg shadow-lg rotate-12 text-[10px] md:text-xs z-10 border border-accent-foreground/10">
-                MATERIAL DIGITAL
-              </div>
-              <div className="absolute -bottom-3 -left-3 bg-primary text-primary-foreground font-bold py-1.5 px-3 rounded-lg shadow-lg -rotate-6 text-[10px] md:text-xs z-10">
-                PDF PARA DOWNLOAD
-              </div>
-            </div>
-          </div>
-
           {/* Urgency badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-body font-semibold text-xs md:text-sm px-4 py-2 rounded-full mb-6">
             🏊 OFERTA ESPECIAL — SÓ HOJE {today}
