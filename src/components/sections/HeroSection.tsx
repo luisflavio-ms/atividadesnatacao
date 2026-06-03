@@ -18,11 +18,10 @@ const HeroSection = () => {
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-7xl font-extrabold text-foreground leading-tight mb-6">
-            <span className="text-gradient block mb-2">Domine a Piscina!</span>
-            Mais de <span className="text-primary underline decoration-accent/30">300 Atividades</span> de Natação para Aulas Inesquecíveis
+            Chega de aulas <span className="text-destructive">repetitivas</span> e alunos <span className="text-destructive">desmotivados</span>
           </h1>
           <p className="font-body text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
-            Economize horas de planejamento com um <span className="text-foreground font-semibold italic">acervo prático e divertido</span>. Aumente o engajamento dos seus alunos e torne-se o professor mais desejado da sua região.
+            Pare de perder horas tentando criar algo novo. Tenha em mãos <span className="text-foreground font-semibold">300+ atividades prontas</span> para acabar com a monotonia, recuperar a atenção dos alunos e eliminar o cansaço do planejamento diário.
           </p>
 
           <a href="#planos">
