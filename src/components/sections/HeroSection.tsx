@@ -13,20 +13,20 @@ const HeroSection = () => {
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgency badge */}
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary font-body font-semibold text-xs md:text-sm px-4 py-2 rounded-full mb-6">
-            🏊 OFERTA ESPECIAL — SÓ HOJE {today}
+          <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive font-body font-bold text-xs md:text-sm px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+            ⚡ OFERTA RELÂMPAGO — SÓ HOJE {today}
           </div>
 
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-5">
-            Mais de <span className="text-gradient">300 atividades de natação</span> para transformar suas aulas em <span className="text-gradient">experiências inesquecíveis</span>
+            <span className="text-gradient">300 Atividades Prontas</span> de Natação para Você Parar de Perder Horas Planejando e Dar Aulas que <span className="text-gradient">Encantam</span>
           </h1>
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Tenha acesso a um acervo completo de atividades práticas, divertidas e fáceis de aplicar para tornar suas aulas mais dinâmicas, engajar seus alunos e aumentar a satisfação dentro da piscina.
+            Acabe hoje com a repetição, a falta de ideias e o cansaço do planejamento. Tenha em mãos um acervo organizado por idade, nível e objetivo — pronto para usar na sua próxima aula, mesmo que comece amanhã cedo.
           </p>
 
           <a href="#planos">
-            <Button className="bg-gradient-cta text-primary-foreground font-body font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
-              👉 QUERO ACESSAR AGORA
+            <Button className="bg-gradient-cta text-primary-foreground font-body font-extrabold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
+              🏊 QUERO ACESSO IMEDIATO AGORA
             </Button>
           </a>
 
