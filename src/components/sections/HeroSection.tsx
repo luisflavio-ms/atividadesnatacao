@@ -12,6 +12,16 @@ const HeroSection = () => {
 
       <div className="container relative">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Mockup Image */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="https://wogunbzijppmeuleitjq.supabase.co/storage/v1/object/public/temp-images/78f8dbce-c1e8-4f24-8768-09e61be087b1.png" 
+              alt="Mockup do Produto" 
+              className="max-w-full h-auto drop-shadow-2xl rounded-lg"
+              loading="eager"
+            />
+          </div>
+
           {/* Urgency badge */}
           <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive font-body font-bold text-xs md:text-sm px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
             ⚡ OFERTA RELÂMPAGO — SÓ HOJE {today}
