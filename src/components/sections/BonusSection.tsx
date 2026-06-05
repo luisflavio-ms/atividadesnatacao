@@ -2,16 +2,25 @@ import { Gift } from "lucide-react";
 
 const bonuses = [
   {
-    name: "Guia de Jogos Aquáticos para Crianças",
+    name: "Bônus #1 — Guia de Jogos Aquáticos",
     price: "R$37",
-    desc: "20 jogos lúdicos para tornar as aulas infantis inesquecíveis.",
+    desc: "20+ jogos lúdicos para tornar as aulas infantis inesquecíveis e bombar a turma.",
   },
   {
-    name: "Planilha de Periodização de Treinos",
+    name: "Bônus #2 — Planilha de Periodização",
     price: "R$47",
-    desc: "Organize seus treinos semanais e mensais com facilidade.",
+    desc: "Organize semanas e meses inteiros de aulas em poucos cliques, com método.",
   },
-  { name: "+100 brincadeiras aquáticas", price: "R$27", desc: "Tenha mais de 100 ideias adicionais para suas aulas." },
+  {
+    name: "Bônus #3 — +100 Brincadeiras Aquáticas",
+    price: "R$27",
+    desc: "Banco extra de ideias para variar a cada aula e nunca mais repetir exercício.",
+  },
+  {
+    name: "Bônus #4 — Aulas Temáticas Prontas",
+    price: "R$37",
+    desc: "Sequências completas: aula funcional, idosos, coordenação, resistência e mais.",
+  },
 ];
 
 const BonusSection = () => (
@@ -19,19 +28,19 @@ const BonusSection = () => (
     <div className="container">
       <div className="max-w-3xl mx-auto text-center mb-8">
         <div className="inline-flex items-center gap-2 bg-swim-orange/20 text-foreground font-body font-bold text-sm px-5 py-2 rounded-full mb-4">
-          <Gift size={18} /> BÔNUS EXCLUSIVOS
+          <Gift size={18} /> 4 BÔNUS EXCLUSIVOS HOJE
         </div>
 
         <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">
-          Leve Tudo Isso <span className="text-gradient">GRÁTIS Hoje</span>
+          E Ainda Leva <span className="text-gradient">4 Bônus GRÁTIS</span> (Só Hoje)
         </h2>
         <p className="font-body text-muted-foreground text-base">
-          Ao adquirir o material hoje, você recebe 3 bônus incríveis sem pagar nada a mais.
+          Comprando hoje, você desbloqueia mais de R$148 em materiais extras — sem pagar nada a mais.
         </p>
       </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mb-8">
           {bonuses.map((b, i) => (
             <div
               key={i}
@@ -66,7 +75,7 @@ const BonusSection = () => (
           </p>
           <div className="flex items-center justify-center gap-6">
             <span className="font-display text-2xl md:text-3xl text-muted-foreground line-through decoration-destructive/60 decoration-4">
-              R$111
+              R$148
             </span>
             <span className="text-primary font-bold text-4xl md:text-5xl drop-shadow-sm">GRÁTIS</span>
           </div>

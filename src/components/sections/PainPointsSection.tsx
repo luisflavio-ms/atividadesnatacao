@@ -1,20 +1,24 @@
 import { X } from "lucide-react";
 
 const pains = [
-  "As aulas podem ficar repetitivas",
-  "Os alunos perdem motivação",
-  "Pais querem ver evolução + diversão",
-  "Adolescentes precisam de desafio",
-  "Adultos e idosos precisam se sentir seguros e engajados",
+  "Você gasta horas planejando aulas e ainda sente que falta criatividade",
+  "Repete os mesmos exercícios e percebe os alunos perdendo o interesse",
+  "Pais cobram resultado, diversão e evolução — tudo ao mesmo tempo",
+  "Adolescentes desafiam você a trazer algo novo a cada aula",
+  "Adultos e idosos precisam de segurança, motivação e variedade",
+  "Você sabe que pode perder alunos se a aula virar rotina",
 ];
 
 const PainPointsSection = () => (
   <section className="py-16 md:py-24 bg-background">
     <div className="container">
       <div className="max-w-2xl mx-auto">
-        <h2 className="scroll-fade font-display text-2xl md:text-4xl font-bold text-center text-primary mb-10 leading-tight">
-          Se você é profissional de Educação Física, professor de natação, instrutor de clubes, escolas, academias ou piscinas particulares, você sabe que:
+        <h2 className="scroll-fade font-display text-2xl md:text-4xl font-bold text-center text-primary mb-4 leading-tight">
+          Se você dá aulas de natação, provavelmente já passou por isso:
         </h2>
+        <p className="scroll-fade font-body text-center text-muted-foreground mb-10 text-base md:text-lg">
+          Professor, instrutor, profissional de Educação Física — você não está sozinho.
+        </p>
         <ul className="space-y-5">
           {pains.map((pain, i) => (
             <li
@@ -28,6 +32,9 @@ const PainPointsSection = () => (
             </li>
           ))}
         </ul>
+        <p className="scroll-fade font-body text-center text-foreground font-semibold mt-10 text-lg md:text-xl">
+          Imagine acabar com tudo isso ainda <span className="text-gradient">esta semana</span>.
+        </p>
       </div>
     </div>
   </section>
