@@ -36,7 +36,7 @@ const HeroSection = () => {
 
           <a href="#planos">
             <Button className="bg-gradient-cta text-primary-foreground font-body font-extrabold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-xl shadow-lg animate-pulse-soft hover:brightness-110 transition-all mb-10 w-full md:w-auto">
-              🏊 QUERO ACESSO IMEDIATO AGORA
+              QUERO MEU ACESSO AGORA
             </Button>
           </a>
 
