@@ -43,131 +43,118 @@ const PricingSection = () => {
   };
 
   return (
-    <section id="planos" className="py-16 md:py-24 bg-slate-50 scroll-mt-20">
+    <section id="planos" className="py-16 md:py-24 bg-background scroll-mt-20">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Escolha o seu Plano</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">Acesso imediato e vitalício para transformar suas aulas hoje.</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
-          {/* Pacote Normal - Simplified */}
-          <div className="relative flex">
-            <div className="h-full w-full bg-white rounded-3xl p-6 md:p-8 shadow-sm flex flex-col items-center text-center border border-slate-200 transition-all hover:shadow-md">
-              <h3 className="font-display text-xl font-bold text-slate-700 mb-5 tracking-wide mt-2">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+          {/* Pacote Normal - Less prominent */}
+          <div className="relative pt-4 flex">
+            <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-sm flex flex-col items-center text-center border border-border">
+              <h3 className="font-display text-xl font-bold text-foreground mb-5 tracking-wide mt-2">
                 300 Atividades de Natação
               </h3>
 
-              <div className="flex flex-col items-center mb-8">
-                <span className="font-body text-slate-400 font-medium line-through text-sm">R$97</span>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-bold text-slate-800">R$</span>
-                  <span className="font-display text-4xl font-bold text-slate-800 tracking-tight">17,90</span>
-                </div>
-                <span className="font-body text-slate-500 text-xs mt-1 uppercase tracking-wider font-semibold">pagamento único</span>
-              </div>
+              <span className="font-body text-muted-foreground font-medium line-through text-sm mb-1">R$97</span>
+              <span className="font-display text-4xl font-bold text-foreground mb-2 tracking-tight">R$17,90</span>
+              <span className="font-body text-muted-foreground text-sm mb-1">pagamento único</span>
+              <span className="font-body text-muted-foreground font-semibold text-sm mb-8">Você economiza R$79,10</span>
 
-              <ul className="space-y-4 mb-8 w-full text-left flex-grow">
+              <ul className="space-y-4 mb-8 w-full text-left">
                 {[
                   "300 Atividades de Natação",
-                  "Organizadas por idade e nível",
+                  "Organizadas por idade, nível e objetivo",
                   "Acesso digital imediato",
                   "Garantia de 7 dias",
                 ].map((text, i) => (
-                  <li key={i} className="flex items-start gap-3 font-body text-sm text-slate-600">
-                    <Check className="text-slate-400 flex-shrink-0 mt-0.5 stroke-[2]" size={16} />
+                  <li key={i} className="flex items-start gap-3 font-body text-[15px] text-muted-foreground">
+                    <Check className="text-muted-foreground flex-shrink-0 mt-0.5 stroke-[2]" size={18} />
                     <span>{text}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="w-full">
+              <div className="mt-auto w-full pt-2">
                 <button
                   onClick={handleNormalClick}
-                  className="w-full py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-body font-bold text-sm rounded-2xl transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 bg-muted hover:bg-muted/80 active:scale-[0.98] text-foreground font-body font-bold text-base rounded-full border border-border transition-all flex items-center justify-center gap-2"
                 >
-                  <ShoppingCart size={18} />
-                  COMPRAR BÁSICO
+                  <ShoppingCart size={20} />
+                  COMPRAR AGORA
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Pacote Premium - Highly Prominent */}
-          <div className="relative flex group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-swim-aqua to-primary rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse-soft"></div>
-            
-            <div className="relative h-full w-full bg-white rounded-3xl p-6 md:p-10 shadow-2xl flex flex-col items-center text-center border-2 border-primary overflow-hidden">
-              {/* Ribbon/Badge */}
-              <div className="absolute top-0 right-0 overflow-hidden w-32 h-32">
-                <div className="bg-swim-orange text-white font-bold text-[10px] py-1 px-10 transform rotate-45 translate-x-8 translate-y-4 shadow-sm uppercase tracking-widest">
-                  Popular
-                </div>
-              </div>
+          {/* Pacote Premium - Most prominent */}
+          <div className="relative pt-4 flex">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 z-10">
+              <span className="bg-swim-orange text-foreground font-body font-bold text-xs px-4 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                <Crown size={14} />
+                MAIS VENDIDO
+              </span>
+            </div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1.5 rounded-full bg-gradient-to-r from-primary to-swim-aqua"></div>
 
-              <div className="mb-2">
-                <span className="bg-primary/10 text-primary font-body font-bold text-xs px-4 py-1.5 rounded-full flex items-center gap-1.5 uppercase tracking-wider">
-                  <Crown size={14} className="fill-primary" />
-                  Pacote Premium Completo
-                </span>
-              </div>
-
-              <h3 className="font-display text-2xl md:text-3xl font-black text-slate-900 mb-6 tracking-tight">
-                Tudo que você precisa
+            <div className="h-full w-full bg-card rounded-2xl p-6 md:p-8 shadow-[0_8px_40px_hsl(205_85%_45%/0.18)] flex flex-col items-center text-center border-2 border-primary ring-2 ring-primary/10">
+              <h3 className="font-display text-2xl font-bold text-foreground mb-5 tracking-wide mt-4">
+                Pacote Premium Completo
               </h3>
 
-              <div className="flex flex-col items-center mb-8">
-                <span className="font-body text-slate-400 font-medium line-through text-lg">R$197</span>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl font-bold text-primary">R$</span>
-                  <span className="font-display text-6xl md:text-7xl font-black text-primary tracking-tighter">
-                    32,90
-                  </span>
-                </div>
-                <div className="bg-emerald-100 text-emerald-700 font-bold text-[11px] px-3 py-1 rounded-full mt-2 uppercase">
-                  Economia de R$164,10
-                </div>
-              </div>
+              <span className="font-body text-muted-foreground font-medium line-through text-[17px] mb-1">R$197</span>
+              <span className="font-display text-5xl md:text-6xl font-bold text-primary mb-2 tracking-tight">
+                R$32,90
+              </span>
+              <span className="font-body text-muted-foreground text-[15px] mb-1">pagamento único</span>
+              <span className="font-body text-primary font-bold text-[15px] mb-8">Você economiza R$164,10</span>
 
-              <div className="w-full space-y-3 mb-10 text-left flex-grow">
-                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">O que está incluído:</p>
+              <ul className="space-y-4 mb-8 w-full text-left">
                 {[
-                  { text: "300 Atividades de Natação", bonus: false },
-                  { text: "Organização por idade e objetivo", bonus: false },
-                  { text: "Acesso vitalício e imediato", bonus: false },
-                  { text: "BÔNUS: Guia de Jogos Aquáticos", bonus: true },
-                  { text: "BÔNUS: Planilha de Periodização", bonus: true },
-                  { text: "BÔNUS: +100 brincadeiras extras", bonus: true },
-                  { text: "Garantia incondicional de 7 dias", bonus: false },
+                  {
+                    text: "300 Atividades de Natação",
+                    bonus: false,
+                  },
+                  {
+                    text: "Organizadas por idade, nível e objetivo",
+                    bonus: false,
+                  },
+                  {
+                    text: "Acesso digital imediato",
+                    bonus: false,
+                  },
+                  {
+                    text: "BÔNUS: Guia de Jogos Aquáticos",
+                    bonus: true,
+                  },
+                  {
+                    text: "BÔNUS: Planilha de Periodização",
+                    bonus: true,
+                  },
+                  {
+                    text: "BÔNUS: +100 brincadeiras aquáticas",
+                    bonus: true,
+                  },
+                  {
+                    text: "Garantia de 7 dias",
+                    bonus: false,
+                  },
                 ].map((item, i) => (
-                  <li key={i} className={`flex items-start gap-3 font-body text-[15px] list-none ${item.bonus ? "text-slate-900 font-semibold" : "text-slate-600"}`}>
+                  <li key={i} className="flex items-start gap-3 font-body text-[16px] text-foreground">
                     {item.bonus ? (
-                      <div className="bg-primary/10 p-1 rounded-full">
-                        <Gift className="text-primary flex-shrink-0" size={16} />
-                      </div>
+                      <Gift className="text-primary flex-shrink-0 mt-0.5" size={20} />
                     ) : (
-                      <div className="bg-emerald-100 p-1 rounded-full">
-                        <Check className="text-emerald-600 flex-shrink-0 stroke-[3]" size={16} />
-                      </div>
+                      <Check className="text-primary flex-shrink-0 mt-0.5 stroke-[3]" size={20} />
                     )}
-                    <span>{item.text}</span>
+                    <span className={item.bonus ? "font-semibold text-primary" : ""}>{item.text}</span>
                   </li>
                 ))}
-              </div>
+              </ul>
 
-              <div className="w-full">
-                <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block group/btn">
-                  <button className="w-full py-6 bg-gradient-cta hover:scale-[1.02] active:scale-[0.98] text-white font-body font-black text-xl rounded-2xl shadow-xl shadow-primary/30 transition-all flex flex-col items-center justify-center gap-0 relative overflow-hidden">
-                    <span className="flex items-center gap-2">
-                      <Star size={20} className="fill-white animate-spin-slow" />
-                      QUERO O PREMIUM AGORA
-                    </span>
-                    <span className="text-[10px] opacity-80 font-normal uppercase tracking-widest mt-1">Acesso imediato por e-mail</span>
+              <div className="mt-auto w-full pt-2">
+                <a href={getUrl("https://pay.wiapy.com/y9A5jHIgSW")} className="block w-full">
+                  <button className="w-full py-5 bg-gradient-cta hover:brightness-110 active:scale-[0.98] text-primary-foreground font-body font-extrabold text-xl rounded-full shadow-[0_10px_30px_hsl(205_85%_45%/0.4)] transition-all flex items-center justify-center gap-2 animate-pulse-soft">
+                    <Star size={24} className="stroke-[2.5]" />
+                    QUERO O PREMIUM
                   </button>
                 </a>
-                <p className="mt-4 text-[10px] text-slate-400 flex items-center justify-center gap-1">
-                   🔒 Compra 100% segura via Wiapy
-                </p>
               </div>
             </div>
           </div>
