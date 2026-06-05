@@ -22,7 +22,7 @@ const HeroSection = () => {
             <img 
               src="https://wogunbzijppmeuleitjq.supabase.co/storage/v1/object/public/temp-images/78f8dbce-c1e8-4f24-8768-09e61be087b1.png" 
               alt="Mockup do Produto" 
-              className="max-w-full h-auto drop-shadow-2xl rounded-lg"
+              className="max-w-full h-auto"
               loading="eager"
             />
           </div>
